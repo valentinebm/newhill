@@ -6,5 +6,9 @@
   </head>
   <body>
     <h1>Welcome to the Kingdom of the hill</h1>
+
+      <% if current_user %>
+      Your name is <%= current_user.first_name %>
+      <% end %>
   </body>
 </html>

@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160723212103) do
     t.datetime "updated_at", null: false
     t.string   "provider"
     t.string   "uid"
-    t.string   "name"
+    t.string   "first_name"
     t.string   "password"
   end
 

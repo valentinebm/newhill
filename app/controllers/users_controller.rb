@@ -1,5 +1,3 @@
 class UsersController < ApplicationController
-  def show
-    @name = user.name
-  end
+  before_action :authenticate_user
 end

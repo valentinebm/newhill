@@ -10,5 +10,12 @@
 
   <body>
     <%= yield %>
+
+    <% if current_user %>
+      <p> Welcome <%= current_user.first_name %>! </p>
+      <%= link_to "Sign out", signout_path %>
+    <% else %>
+      <%= link_to "Sign in with Facebook", "/auth/facebook" %>
+    <% end %>
   </body>
 </html>
