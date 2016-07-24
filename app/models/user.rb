@@ -5,7 +5,7 @@ class User < ApplicationRecord
     user = find_or_create_by(uid: auth['uid'], provider: auth['provider'])
     user.password = auth['uid']
     user.first_name = auth['info']['first_name']
-    user.save
+    user.save!
 
     if User.exists?(user)
       user
@@ -14,5 +14,5 @@ class User < ApplicationRecord
       user
     end
   end
-  
+
 end
