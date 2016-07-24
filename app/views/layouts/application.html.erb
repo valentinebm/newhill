@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <% flash.each do |key, msg| %>
+      <%= content_tag :div, msg, id: key, style: "color: red;"%>
+    <% end %>
+
+    <h1>Welcome to the Kingdom of the Hill</h1>
+
+
     <%= yield %>
 
     <% if current_user %>
