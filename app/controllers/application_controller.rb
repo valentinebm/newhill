@@ -17,4 +17,17 @@ class ApplicationController < ActionController::Base
 
   helper_method :require_signin!
 
+  def current_reign
+    @current_reign ||= Reign.last
+  end
+
+  helper_method :current_reign
+
+  def current_monarch
+    current_monarch_id = Reign.last.user_id
+    @current_monarch ||= User.find(current_monarch_id)
+  end
+
+  helper_method :current_monarch
+
 end
