@@ -36,8 +36,15 @@ ActiveRecord::Schema.define(version: 20160725100607) do
     t.datetime "updated_at", null: false
     t.string   "provider"
     t.string   "uid"
+    t.string   "email"
     t.string   "first_name"
+    t.string   "last_name"
     t.string   "password"
+    t.string   "age_range"
+    t.string   "link"
+    t.string   "picture"
+    t.string   "locale"
+    t.string   "gender"
   end
 
 end
