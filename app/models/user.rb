@@ -29,7 +29,8 @@ class User < ApplicationRecord
   end
 
   def ranking
-    User.where("total_reign > ?", total_reign).count
+    ranking = User.where("total_reign > ?", total_reign).count
+    ranking +=1
   end
 
 end
