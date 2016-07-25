@@ -33,4 +33,15 @@ class User < ApplicationRecord
     ranking +=1
   end
 
+  def title
+    if self.gender == 'male'
+      title = 'King'
+    elsif self.gender == 'female' %
+      title = 'Queen'
+    else
+      title = 'Monarch'
+    end
+    title
+  end
+
 end

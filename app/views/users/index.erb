@@ -1,12 +1,6 @@
 <h3>Hello
   <% if current_user == current_monarch %>
-    <% if current_monarch.gender == 'male' %>
-    King
-    <% elsif current_monarch.gender == 'female' %>
-    Queen
-    <% else %>
-    Monarch
-    <% end %>
+    <%=current_user.title%>
   <% end %>
   <%= current_user.first_name %> </h3>
 
@@ -16,16 +10,7 @@
       <%= reigns.length %>
       times over the hill, for a total duration of <%= humanize(current_user.total_reign) %>.</p>
     <% else %>
-    <p> This is your first time as
-      <% if current_user == current_monarch %>
-        <% if current_monarch.gender == 'male' %>
-        King
-        <% elsif current_monarch.gender == 'female' %>
-        Queen
-        <% else %>
-        Monarch
-        <% end %>
-      <% end %> of the Hill. Congrats! Hope you're enjoying this royal feeling..
+    <p> This is your first time as <%=current_user.title%> of the Hill. Congrats! Hope you're enjoying this royal feeling..
     </p>
     <% end %>
     <p>Your global rank is: <%= current_user.ranking%>/<%=User.count%> </p>
