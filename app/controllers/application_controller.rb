@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
-
   helper_method :require_signin!
 
   def current_reign
