@@ -5,13 +5,13 @@ The history of the Kingdom of the Hill:
   <% @reigns.each do |reign| %>
   <li>
     <% monarch = User.find(reign.user_id) %>
-    <% if current_monarch.gender == 'male' %>
+    <% if monarch.gender == 'male' %>
     King
-    <% elsif current_monarch.gender == 'female' %>
+    <% elsif monarch.gender == 'female' %>
     Queen
     <% else %>
     Monarch
-    <% end %>  
+    <% end %>
     <%= "#{monarch.first_name}: from #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
     <% unless reign.finished == nil%>
       <% length = Length.find(reign.id) %>
