@@ -1,0 +1,15 @@
+The history of the Kingdom of the Hill:
+
+<ol>
+
+  <% @reigns.each do |reign| %>
+  <li>
+    <% monarch = User.find(reign.user_id) %>
+    <%= "#{monarch.first_name}: from #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
+    <% unless reign.finished == nil%>
+      <%="until #{reign.finished.to_formatted_s(:long_ordinal)} - #{reign.duration}" %>
+    <% end %>
+  </li>
+  <% end %>
+
+</ol>

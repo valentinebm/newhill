@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    # redirect to profile page if logged in
+    redirect_to ('/users') if current_user
   end
 end

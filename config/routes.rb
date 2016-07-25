@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
+  get '/reigns', to: 'reigns#index'
+
 
 end

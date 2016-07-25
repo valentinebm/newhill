@@ -1,7 +1,7 @@
 <h3>Hello <%= current_user.first_name %> </h3>
 
     <% if current_user == current_monarch %>
-     <p>'You are ruling over the hill'</p>
+     <p>'YAY! You are ruling over the hill!'</p>
     <% else %>
-    <%= current_monarch.first_name%> is ruling over the hill!
+    <%= current_monarch.first_name%> is ruling over the hill! Sign out and Sign in again to return on the throne!
     <% end %>

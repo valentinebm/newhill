@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+gem 'time_difference'
+# gem 'time_diff'
+
 gem 'figaro'
 gem 'rails_12factor', group: :production
 gem 'omniauth-facebook'
