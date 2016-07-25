@@ -10,11 +10,18 @@
   <% end %>
   <%= current_user.first_name %> </h3>
 
+  <div class="user-stats">
+    <p>In total, you have ruled <% reigns = Reign.where.not(finished: nil).where(user_id: current_user.id) %>
+      <%= reigns.length %>
+      times over the hill, for a total duration of <%= humanize(current_user.total_reign) %>.</p>
+    <p>Your global rank is: </p>
+
+  </div>
+
   <% if current_user == current_monarch %>
-    <p>'You are ruling over the hill! So much royalty in you..'</p>
+    <p>Currently, YOU are ruling over the hill! So much royalty in you..</p>
   <% else %>
-    <%= current_monarch.first_name%> is ruling over the hill!
-    <p>
-      Sign out and Sign in again to return on the throne!
-    </p>
+    <p>Currently, <%= current_monarch.first_name%> is ruling over the hill..</p>
+
+    <p>Sign out and Sign in again to return on the throne!</p>
   <% end %>
