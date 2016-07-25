@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def top_ten_monarchs
-    User.order(total_reign: :desc).limit(10)
+    User.where.not(total_reign: 0).order(total_reign: :desc).limit(10)
   end
 
 end
