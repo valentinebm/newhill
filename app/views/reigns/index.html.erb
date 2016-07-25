@@ -8,9 +8,10 @@ The history of the Kingdom of the Hill:
     <%= "#{monarch.first_name}: from #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
     <% unless reign.finished == nil%>
       <% length = Length.find(reign.id) %>
-      <%="until #{reign.finished.to_formatted_s(:long_ordinal)} - #{length.seconds} seconds" %>
+      <%="until #{reign.finished.to_formatted_s(:long_ordinal)} - #{humanize(length.secs)}" %>
     <% end %>
   </li>
   <% end %>
+
 
 </ol>
