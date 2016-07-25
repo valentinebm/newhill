@@ -9,8 +9,8 @@ module ApplicationHelper
     }.compact.reverse.join(' ')
   end
 
-  def top_ten_reigns
-    top_ten = Reign.where.not(duration: nil).order(duration: :desc).limit(10)
-  end
+  # def top_ten_reigns
+  #   top_ten = Reign.where.not(duration: nil).order(duration: :desc).limit(10)
+  # end
 
 end
