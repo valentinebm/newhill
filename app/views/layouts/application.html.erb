@@ -13,19 +13,22 @@
       <%= content_tag :div, msg, id: key, style: "color: red;"%>
     <% end %>
 
-    <h1>Welcome to the Kingdom of the Hill</h1>
+    <h1>The Kingdom of the Hill</h1>
 
 
     <%= yield %>
 
-    <% if current_user %>
-      <%= link_to "Sign out", signout_path %>
-    <% else %>
-      <%= link_to "Sign in with Facebook to rule over The Hill", "/auth/facebook" %>
-    <% end %>
+      <% if current_user %>
+        <%= link_to "Sign out", signout_path %>
+      <% else %>
+        <%= link_to "Sign in with Facebook to rule over The Hill", "/auth/facebook" %>
+      <% end %>
 
-    <p>
-      <%= link_to "History of all reigns of The Hill", "/reigns" %>
-    </p>
+      <% unless current_page?('/reigns') %>
+      <p>
+        <%= link_to "History of all reigns of The Hill", "/reigns" %>
+      </p>
+      <% end %>
+
   </body>
 </html>
