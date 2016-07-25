@@ -21,7 +21,15 @@
   <% if current_user == current_monarch %>
     <p>Currently, YOU are ruling over the hill! So much royalty in you..</p>
   <% else %>
-    <p>Currently, <%= current_monarch.first_name%> is ruling over the hill..</p>
+    <p>Currently,
+      <% if current_monarch.gender == 'male' %>
+      King
+      <% elsif current_monarch.gender == 'female' %>
+      Queen
+      <% else %>
+      Monarch
+      <% end %>
+      <%= current_monarch.first_name%> is ruling over the hill..</p>
 
     <p>Sign out and Sign in again to return on the throne!</p>
   <% end %>
