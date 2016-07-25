@@ -11,9 +11,11 @@
   <%= current_user.first_name %> </h3>
 
   <div class="user-stats">
+    <% if current_user.total_reign >0 %>
     <p>In total, you have ruled <% reigns = Reign.where.not(finished: nil).where(user_id: current_user.id) %>
       <%= reigns.length %>
       times over the hill, for a total duration of <%= humanize(current_user.total_reign) %>.</p>
+    <% end %>
     <p>Your global rank is: <%= current_user.ranking%>/<%=User.count%> </p>
 
   </div>
