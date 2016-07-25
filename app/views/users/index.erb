@@ -16,7 +16,7 @@
       <%= reigns.length %>
       times over the hill, for a total duration of <%= humanize(current_user.total_reign) %>.</p>
     <% else %>
-    <p> This is your first time as a
+    <p> This is your first time as
       <% if current_user == current_monarch %>
         <% if current_monarch.gender == 'male' %>
         King
@@ -25,7 +25,7 @@
         <% else %>
         Monarch
         <% end %>
-      <% end %> of the Hill. Congrats, hope you're enjoying this royal feeling..
+      <% end %> of the Hill. Congrats! Hope you're enjoying this royal feeling..
     </p>
     <% end %>
     <p>Your global rank is: <%= current_user.ranking%>/<%=User.count%> </p>
