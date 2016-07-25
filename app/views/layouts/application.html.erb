@@ -24,31 +24,31 @@
         <%= link_to "Sign in with Facebook to rule over The Hill", "/auth/facebook" %>
       <% end %>
 
+
       <% unless current_page?('/reigns') %>
-
-      <!-- <div class="top-ten-reigns">
-      Top 10 reigns
-        <ol>
-          <% top_ten_reigns.each do |reign| %>
-            <% monarch = User.find(reign.user_id) %>
-            <li>
-            <% if monarch.gender == 'male' %>
-              King
-            <% elsif monarch.gender == 'female' %>
-              Queen
-            <% else %>
-              Monarch
+        <div class="top-ten-reigns">
+        Top 10 reigns
+          <ol>
+            <% top_ten_reigns.each do |reign| %>
+              <% monarch = User.find(reign.user_id) %>
+              <li>
+              <% if monarch.gender == 'male' %>
+                King
+              <% elsif monarch.gender == 'female' %>
+                Queen
+              <% else %>
+                Monarch
+              <% end %>
+              <%= "#{monarch.first_name} :" %>
+             <%= humanize(reign.duration) %>
+            </li>
             <% end %>
-            <%= "#{monarch.first_name} :" %>
-           <%= humanize(reign.duration) %>
-          </li>
-          <% end %>
-        </ol>
-      </div> -->
+          </ol>
+        </div>
 
-      <p>
-        <%= link_to "History of all reigns of The Hill", "/reigns" %>
-      </p>
+        <p>
+          <%= link_to "History of all reigns of The Hill", "/reigns" %>
+        </p>
       <% end %>
 
   </body>
