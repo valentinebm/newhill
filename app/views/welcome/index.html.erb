@@ -1,1 +1,10 @@
-<h2><%= current_monarch.first_name%> is ruling over the hill!</h2>
+<h2>
+  <% if current_monarch.gender == 'male' %>
+  King
+  <% elsif current_monarch.gender == 'female' %>
+  Queen
+  <% else %>
+  Monarch
+  <% end %>
+  <%= current_monarch.first_name%> is ruling over the hill!
+</h2>
