@@ -11,5 +11,6 @@ class AddColumnsToUsers < ActiveRecord::Migration[5.0]
     add_column :users, :picture, :string
     add_column :users, :locale, :string
     add_column :users, :gender, :string
+    add_column :users, :total_reign, :integer
   end
 end

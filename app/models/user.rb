@@ -12,6 +12,7 @@ class User < ApplicationRecord
     user.picture = auth.extra.raw_info.picture
     user.locale = auth.extra.raw_info.locale
     user.gender = auth.extra.raw_info.gender
+    user.total_reign ||= 0
     user.save!
 
     if User.exists?(user)
@@ -20,6 +21,11 @@ class User < ApplicationRecord
       user.save!
       user
     end
+  end
+
+  def update_total_reign(duration)
+    actual_duration = self.total_reign += duration
+    self.update_attribute(:total_reign, actual_duration)
   end
 
 end

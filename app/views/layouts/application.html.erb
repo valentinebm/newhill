@@ -24,6 +24,26 @@
         <%= link_to "Sign in with Facebook to rule over The Hill", "/auth/facebook" %>
       <% end %>
 
+      <div class="top-ten-rulers">
+      Top 10 monarchs
+        <ol>
+          <% top_ten_monarchs.each do |monarch| %>
+            <li>
+            <% if monarch.gender == 'male' %>
+              King
+            <% elsif monarch.gender == 'female' %>
+              Queen
+            <% else %>
+              Monarch
+            <% end %>
+            <%= "#{monarch.first_name} :" %>
+           <%= humanize(monarch.total_reign) %>
+          </li>
+          <% end %>
+        </ol>
+      </div>
+
+
 
       <% unless current_page?('/reigns') %>
         <div class="top-ten-reigns">

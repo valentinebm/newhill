@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20160724190245) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "provider"
     t.string   "uid"
     t.string   "email"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160724190245) do
     t.string   "picture"
     t.string   "locale"
     t.string   "gender"
+    t.integer  "total_reign"
   end
 
 end
