@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
         Reign.transition(user.id)
       end
       session[:user_id] = user.id
-      redirect_to user_path(user.id)
+      redirect_to users_path
     else
       user = User.find_by_email(params[:email])
       user && user.authenticate(params[:password])
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
         Reign.transition(user.id)
       end
       session[:user_id] = user.id
-      redirect_to user_path(user.id)
+      redirect_to users_path
     end
   end
 
