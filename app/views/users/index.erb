@@ -15,6 +15,18 @@
     <p>In total, you have ruled <% reigns = Reign.where.not(finished: nil).where(user_id: current_user.id) %>
       <%= reigns.length %>
       times over the hill, for a total duration of <%= humanize(current_user.total_reign) %>.</p>
+    <% else %>
+    <p> This is your first time as a
+      <% if current_user == current_monarch %>
+        <% if current_monarch.gender == 'male' %>
+        King
+        <% elsif current_monarch.gender == 'female' %>
+        Queen
+        <% else %>
+        Monarch
+        <% end %>
+      <% end %> of the Hill. Congrats, hope you're enjoying this royal feeling..
+    </p>
     <% end %>
     <p>Your global rank is: <%= current_user.ranking%>/<%=User.count%> </p>
 
