@@ -33,6 +33,17 @@ class User < ApplicationRecord
     ranking +=1
   end
 
+  def ranking_by_reign_number
+    users = User.joins("left join reigns on reigns.user_id = users.id").group(:id).order("count(*) desc")
+    user_rank = users.each_with_index do |user, index|
+      if user.id == self.id
+      return index + 1
+      end
+    end
+  end
+
+
+
   def title
     if self.gender == 'male'
       title = 'King'
