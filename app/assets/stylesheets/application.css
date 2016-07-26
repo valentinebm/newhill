@@ -16,6 +16,32 @@
  */
 
   body {
-    background-image: url("hill-background.png");
-    background-position: 50% 50%;
+    background-color: #B3F9FE;
+    margin: 0;
+  }
+
+  .hill-image {
+    width: 100%;
+    position: fixed;
+    bottom: -25px;
+  }
+  .cloud {
+    position: fixed;
+    z-index: -1;
+  }
+
+  .cloud-1 {
+    width: 15%;
+    margin-left: 10px;
+  }
+
+  .cloud-2 {
+    width: 25%;
+    right: 20px;
+  }
+
+  .cloud-3 {
+    top: 350px;
+    right: 100px;
+    width: 10%
   }
