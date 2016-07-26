@@ -15,3 +15,17 @@
 //= require turbolinks
 //= require_tree .
 //= require social-share-button
+
+$(function () {
+  $('.cloud').onClick = function(e){
+    e.preventDefault;
+    console.log("You clicked on a cloud")
+  }
+
+  $('body').onClick = function(e){
+    e.preventDefault;
+    console.log("You clicked on the body")
+  }
+
+
+})

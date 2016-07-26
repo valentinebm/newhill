@@ -24,6 +24,7 @@
     width: 100%;
     position: fixed;
     bottom: -25px;
+    z-index: -1;
   }
   .cloud {
     position: fixed;
