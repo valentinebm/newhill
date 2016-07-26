@@ -14,3 +14,8 @@
  *= require_self
  *= require social-share-button
  */
+
+  body {
+    background-image: url("hill-background.png");
+    background-position: 50% 50%;
+  }
