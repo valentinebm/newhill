@@ -1,11 +1,10 @@
 <div class="kingdom-history">
   <h2 class="history-title">The history of the Kingdom of the Hill</h2>
   <h3>All reigns in chronological order</h3>
-  <p> Number, Name</p>
   <div class="reigns">
     <% @reigns.each_with_index do |reign, index| %>
       <div class="monarch-container">
-        <%= "#{index +1}." %>
+        <span class="index"> <%= "#{index +1}." %> </span>
         <% monarch = User.find(reign.user_id) %>
         <span class="appellation">
           <% if monarch.gender == 'male' %>
@@ -17,17 +16,22 @@
           <% end %>
           <%= "#{monarch.first_name}"%>
         </span>
-
         <span class="reign-dates">
         <%="from #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
         <% unless reign.finished == nil%>
           <%="until #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
-
+        <% end %>
         </span>
 
-        <span class="reign-duration"><%="#{humanize(reign.duration)}"%> </span>
-        <% end %>
+        <span class="reign-duration">
+          <% unless reign.finished == nil %>
+            <%="#{humanize(reign.duration)}"%>
+          <% end %>
+        </span>
+
+
       </div>
+      <hr>
     <% end %>
   </div>
 </div>

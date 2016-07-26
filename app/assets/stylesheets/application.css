@@ -105,20 +105,36 @@
   }
 
   .kingdom-history {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
   }
 
   .history-title {
     font-size: 30px;
     text-align: center;
+    margin-top : 27px;
+    margin-left: 20px;
+  }
+
+  .reigns {
+    margin-top: 37px;
+    background-color: rgba(255,0,0,0.1);
+    border-radius: 25px;
+    padding-top: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .monarch-container {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     display: table;
     width: 100%;
     table-layout: fixed;
+  }
+
+  .appellation {
+    font-size: 20px;
+    text-align: left;
   }
 
   span {
