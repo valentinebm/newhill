@@ -14,12 +14,19 @@
  *= require_self
  *= require social-share-button
  */
+ nav {
+   position: fixed;
+   top: 0;
+   left: 8px;
+ }
 
   body {
     background-color: #B3F9FE;
     margin: 0;
     font-family: 'Lato', sans-serif;
     color: rgb(33,33,33);
+    position: relative;
+    top: 80px;
   }
 
   .kingdom-title {
@@ -30,6 +37,7 @@
     font-size: 30px;
     margin-top: 5px;
     margin-left: 10px;
+    margin-bottom: 5px;
   }
 
   .hill-image {
@@ -140,4 +148,20 @@
   span {
     display: table-cell;
     text-align: center;
+  }
+
+  .nav-links {
+    font-size: 15px;
+    margin-left: 15px;
+    width: 80%
+  }
+
+  .link-1 {
+    float:left;
+    display: inline-block;
+  }
+
+  .link-2 {
+    float:right;
+    display: inline-block;
   }

@@ -20,19 +20,22 @@
 
     <img class= "hill-image" src="/assets/hill.png" alt="The Hill" />
 
-    <h1 class="kingdom-title">The Kingdom of the Hill</h1>
-    <% if current_page?('/reigns') %>
-    <%= link_to "Back to the Kingdom of the Hill", '/' %>
-    <%else%>
-      <p><%= link_to "History of all reigns of The Hill", "/reigns" %></p>
-    <% end %>
+    <nav>
+      <h1 class="kingdom-title">The Kingdom of the Hill</h1>
+      <div class="nav-links">
+        <% if current_page?('/reigns') %>
+        <span class="link-1"><%= link_to "Back to the Kingdom of the Hill", '/' %></span>
+        <%else%>
+        <span class="link-1"><%= link_to "History of all reigns of The Hill", "/reigns" %></span>
+        <% end %>
 
-    <% if current_user %>
-      <%= link_to "Sign out", signout_path %>
-    <% else %>
-      <%= link_to "Sign in with Facebook to rule over The Hill", "/auth/facebook" %>
-    <% end %>
-
+        <% if current_user %>
+        <span class="link-2"><%= link_to "Sign out", signout_path %></span>
+        <% else %>
+        <span class="link-2"><%= link_to "Sign in with Facebook to rule over The Hill", "/auth/facebook" %></span>
+        <% end %>
+      </div>
+    </nav>
 
     <%= yield %>
 
