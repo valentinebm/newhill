@@ -1,23 +1,33 @@
-The history of the Kingdom of the Hill:
+<div class="kingdom-history">
+  <h2 class="history-title">The history of the Kingdom of the Hill</h2>
+  <h3>All reigns in chronological order</h3>
+  <p> Number, Name</p>
+  <div class="reigns">
+    <% @reigns.each_with_index do |reign, index| %>
+      <div class="monarch-container">
+        <%= "#{index +1}." %>
+        <% monarch = User.find(reign.user_id) %>
+        <span class="appellation">
+          <% if monarch.gender == 'male' %>
+          King
+          <% elsif monarch.gender == 'female' %>
+          Queen
+          <% else %>
+          Monarch
+          <% end %>
+          <%= "#{monarch.first_name}"%>
+        </span>
 
-<ol>
+        <span class="reign-dates">
+        <%="from #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
+        <% unless reign.finished == nil%>
+          <%="until #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
 
-  <% @reigns.each do |reign| %>
-  <li>
-    <% monarch = User.find(reign.user_id) %>
-    <% if monarch.gender == 'male' %>
-    King
-    <% elsif monarch.gender == 'female' %>
-    Queen
-    <% else %>
-    Monarch
+        </span>
+
+        <span class="reign-duration"><%="#{humanize(reign.duration)}"%> </span>
+        <% end %>
+      </div>
     <% end %>
-    <%= "#{monarch.first_name}: from #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
-    <% unless reign.finished == nil%>
-      <%="until #{reign.finished.to_formatted_s(:long_ordinal)} (GMT) - #{humanize(reign.duration)}" %>
-    <% end %>
-  </li>
-  <% end %>
-
-
-</ol>
+  </div>
+</div>
