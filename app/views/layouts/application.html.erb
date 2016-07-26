@@ -6,7 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Lemon|Kavoon' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Lemon|Kavoon|Poiret+One|Comfortaa|Lato|Ubuntu|Oxygen|Asap' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -21,6 +21,11 @@
     <img class= "hill-image" src="/assets/hill.png" alt="The Hill" />
 
     <h1 class="kingdom-title">The Kingdom of the Hill</h1>
+    <% if current_page?('/reigns') %>
+    <%= link_to "Back to the Kingdom of the Hill", '/' %>
+    <%else%>
+      <p><%= link_to "History of all reigns of The Hill", "/reigns" %></p>
+    <% end %>
 
 
     <%= yield %>
@@ -31,8 +36,23 @@
         <%= link_to "Sign in with Facebook to rule over The Hill", "/auth/facebook" %>
       <% end %>
 
-      <div class="top-ten-rulers">
-      Top 10 monarchs
+<div class="top-ten-container">
+
+      <div class="by-reign-number">
+      <h3>Top 10 monarchs</h3>
+      <p>by number of reigns</p>
+        <ol>
+          <% top_ten_monarchs.each do |monarch| %>
+            <li>
+              <%= "#{monarch.title} #{monarch.first_name}: #{humanize(monarch.total_reign)}" %>
+            </li>
+          <% end %>
+        </ol>
+      </div>
+
+      <div class="by-duration">
+      <h3>Top 10 monarchs</h3>
+      <p>by total time ruled over the hill</p>
         <ol>
           <% top_ten_monarchs.each do |monarch| %>
             <li>
@@ -43,9 +63,10 @@
       </div>
 
 
-      <% unless current_page?('/reigns') %>
-        <div class="top-ten-reigns">
-        Top 10 reigns
+        <!-- <div class="top-ten-reigns">
+        <% unless current_page?('/reigns') %>
+        <h3>Top 10 individual reigns</h3>
+          <p>by duration </p>
           <ol>
             <% top_ten_reigns.each do |reign| %>
               <% monarch = User.find(reign.user_id) %>
@@ -54,12 +75,9 @@
               </li>
             <% end %>
           </ol>
-        </div>
-
-        <p>
-          <%= link_to "History of all reigns of The Hill", "/reigns" %>
-        </p>
-      <% end %>
+          <% end %>
+        </div>   -->
+  </div>
 
   </body>
 </html>

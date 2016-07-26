@@ -1,6 +1,10 @@
-  <h2>
-    <%= "#{current_monarch.title} #{current_monarch.first_name}" %> is ruling over the hill!
+
+<div class="current-reign-decl">
+  <h2 class="monarch-decl">
+    <%= "#{current_monarch.title} #{current_monarch.first_name}" %>
   </h2>
+  <h2 class="rule-decl">is ruling over the hill!</h2>
+</div>
 
   <h3>Hello
     <% if current_user == current_monarch %>
