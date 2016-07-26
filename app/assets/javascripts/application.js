@@ -19,12 +19,12 @@
 $(function () {
 
   function moveBackAndForth(targetElement, speed, direction){
-    targetElement.animate({left: '+=40px'},
+    targetElement.animate({left: '+=60px'},
   {
     duration: speed,
     complete: function()
     {
-        targetElement.animate({left: '-=40px'},
+        targetElement.animate({left: '-=60px'},
         {
           duration: speed,
           complete: function()
@@ -37,8 +37,8 @@ $(function () {
 
 }
 
-// moveBackAndForth($('.cloud-1'), 5000)
-// moveBackAndForth($('.cloud-2'), 6000)
-// moveBackAndForth($('.cloud-3'), 4000)
+moveBackAndForth($('.cloud-1'), 5000)
+moveBackAndForth($('.cloud-2'), 6000)
+moveBackAndForth($('.cloud-3'), 4000)
 
 })
