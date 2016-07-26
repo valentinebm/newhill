@@ -18,7 +18,7 @@
 
 $(function () {
 
-  function moveBackAndForth(targetElement, speed, direction){
+  function moveBackAndForth(targetElement, speed){
     targetElement.animate({left: '+=60px'},
   {
     duration: speed,
