@@ -38,10 +38,9 @@
 
 
 <div class="top-ten-container">
-
-      <div class="by-reign-number">
-      <h3>Top 10 monarchs</h3>
-      <p>by number of reigns</p>
+  <h3 class="h3-top">Top 10 monarchs</h3>
+      <div class="top-ten by-reign-number">
+      <p>By number of reigns</p>
         <ol>
           <% top_ten_by_reign_number.each do |monarch| %>
             <li>
@@ -52,9 +51,8 @@
         </ol>
       </div>
 
-      <div class="by-duration">
-      <h3>Top 10 monarchs</h3>
-      <p>by total time ruled over the hill</p>
+      <div class="top-ten by-duration">
+      <p>By total time ruled over the hill</p>
         <ol>
           <% top_ten_by_duration.each do |monarch| %>
             <li>

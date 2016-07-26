@@ -69,17 +69,37 @@
     margin: 0px
   }
 
+  .top-ten-container {
+    width: 60%;
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+  .top-ten-container:after {
+	content: "";
+	width: 100%;
+	display: inline-block;
+    }
+
   /*.top-ten-reigns{
     display: inline-block;
     float: right;
   }*/
 
-  .by-duration{
-    display: inline-block;
-    float: right;
+
+  .h3-top {
+    font-size: 30px;
+    margin: 0px;
+    text-align: center;
   }
 
-  .by-reign-number {
+  .top-ten {
+    margin-top: 10px;
     display: inline-block;
-    float: left;
+    vertical-align: top;
+    width: 350px;
+  }
+
+  ol {
+    padding-left:0; list-style-position:inside;
   }
