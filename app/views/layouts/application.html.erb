@@ -36,7 +36,7 @@
 
     <%= yield %>
 
-
+<% unless current_page?('/reigns') %>
 <div class="top-ten-container">
   <h3 class="h3-top">Top 10 monarchs</h3>
       <div class="top-ten by-reign-number">
@@ -62,7 +62,6 @@
         </ol>
       </div>
 
-
         <!-- <div class="top-ten-reigns">
         <% unless current_page?('/reigns') %>
         <h3>Top 10 individual reigns</h3>
@@ -78,6 +77,7 @@
           <% end %>
         </div>   -->
   </div>
+<% end %>
 
   </body>
 </html>
