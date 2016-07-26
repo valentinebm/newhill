@@ -17,15 +17,28 @@
 //= require social-share-button
 
 $(function () {
-  $('.cloud').onClick = function(e){
-    e.preventDefault;
-    console.log("You clicked on a cloud")
-  }
 
-  $('body').onClick = function(e){
-    e.preventDefault;
-    console.log("You clicked on the body")
-  }
+  function moveBackAndForth(targetElement, speed, direction){
+    targetElement.animate({left: '+=40px'},
+  {
+    duration: speed,
+    complete: function()
+    {
+        targetElement.animate({left: '-=40px'},
+        {
+          duration: speed,
+          complete: function()
+          {
+            moveBackAndForth(targetElement, speed)
+          }
+      })
+    }
+  })
 
+}
+
+moveBackAndForth($('.cloud-1'), 5000)
+moveBackAndForth($('.cloud-2'), 3000)
+moveBackAndForth($('.cloud-3'), 4000)
 
 })
