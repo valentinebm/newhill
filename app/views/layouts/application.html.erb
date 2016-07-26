@@ -42,9 +42,10 @@
       <h3>Top 10 monarchs</h3>
       <p>by number of reigns</p>
         <ol>
-          <% top_ten_monarchs.each do |monarch| %>
+          <% top_ten_by_reign_number.each do |monarch| %>
             <li>
-              <%= "#{monarch.title} #{monarch.first_name}: #{humanize(monarch.total_reign)}" %>
+              <% reigns = Reign.where.not(finished: nil).where(user_id: monarch.id) %>
+              <%= "#{monarch.title} #{monarch.first_name}: #{reigns.length} reigns" %>
             </li>
           <% end %>
         </ol>
@@ -54,7 +55,7 @@
       <h3>Top 10 monarchs</h3>
       <p>by total time ruled over the hill</p>
         <ol>
-          <% top_ten_monarchs.each do |monarch| %>
+          <% top_ten_by_duration.each do |monarch| %>
             <li>
               <%= "#{monarch.title} #{monarch.first_name}: #{humanize(monarch.total_reign)}" %>
             </li>

@@ -13,8 +13,12 @@ module ApplicationHelper
     Reign.where.not(duration: nil).order(duration: :desc).limit(10)
   end
 
-  def top_ten_monarchs
+  def top_ten_by_duration
     User.where.not(total_reign: 0).order(total_reign: :desc).limit(10)
+  end
+
+  def top_ten_by_reign_number
+    User.joins("left join reigns on reigns.user_id = users.id").group(:id).order("count(*) desc").limit(10)
   end
 
 end
