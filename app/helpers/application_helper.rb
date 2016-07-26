@@ -21,4 +21,12 @@ module ApplicationHelper
     User.joins("left join reigns on reigns.user_id = users.id").group(:id).order("count(*) desc").limit(10)
   end
 
+  def ranking_by_reign_number(id)
+    users = User.joins("left join reigns on reigns.user_id = users.id").group(:id).order("count(*) desc")
+    user_rank = users.each_with_index do |user, index|
+      user.id == id
+      return index + 1
+      end
+  end
+
 end

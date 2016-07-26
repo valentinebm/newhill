@@ -27,14 +27,15 @@
       <p><%= link_to "History of all reigns of The Hill", "/reigns" %></p>
     <% end %>
 
+    <% if current_user %>
+      <%= link_to "Sign out", signout_path %>
+    <% else %>
+      <%= link_to "Sign in with Facebook to rule over The Hill", "/auth/facebook" %>
+    <% end %>
+
 
     <%= yield %>
 
-      <% if current_user %>
-        <%= link_to "Sign out", signout_path %>
-      <% else %>
-        <%= link_to "Sign in with Facebook to rule over The Hill", "/auth/facebook" %>
-      <% end %>
 
 <div class="top-ten-container">
 

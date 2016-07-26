@@ -1,4 +1,3 @@
-
 <div class="current-reign-decl">
   <h2 class="monarch-decl">
     <%= "#{current_monarch.title} #{current_monarch.first_name}" %>
@@ -12,9 +11,14 @@
     <% end %>
     <%= current_user.first_name %> </h3>
 
-  <% if current_user == current_monarch %>
-    <p>Yeah..that's right, YOU are ruling over the hill! So much royalty in you..</p>
-  <% else %>
+  <div class="monarch-greeting">
+    <% if current_user == current_monarch %>
+      <p>Yeah..that's right, YOU are ruling over the hill! So much royalty in you..</p>
+    <% else %>
+      <p>Sign out and Sign in again to return on the throne!</p>
+    <% end %>
+
+  </div>
 
   <div class="user-stats">
     <% if current_user.total_reign >0 %>
@@ -25,13 +29,11 @@
     <p> This is your first time as <%=current_user.title%> of the Hill. Congrats! Hope you're enjoying this royal feeling..
     </p>
     <% end %>
-    <p>Your global rank is: <%= current_user.ranking%>/<%=User.count %> </p>
-
+    <ul>Out of all <%=User.count %> monarchs, your global rank is: <li><%= current_user.ranking_by_duration%> by total reign duration</li>
+      <li> <%= ranking_by_reign_number(current_user.id)%> by number of reigns</li>
+    </ul>
   </div>
 
-  <%= social_share_button_tag("Being royal at the hill") %>
-
-
-
-    <p>Sign out and Sign in again to return on the throne!</p>
-  <% end %>
+<div class="sharing-buttons">
+    <%= social_share_button_tag("Being royal at the hill") %>
+</div>

@@ -28,7 +28,7 @@ class User < ApplicationRecord
     self.update_attribute(:total_reign, actual_duration)
   end
 
-  def ranking
+  def ranking_by_duration
     ranking = User.where("total_reign > ?", total_reign).count
     ranking +=1
   end
