@@ -70,6 +70,7 @@
 
   .current-reign-decl {
     text-align: center;
+    margin-top: 35px;
   }
 
   .monarch-decl {
@@ -81,7 +82,7 @@
   }
 
   .top-ten-container {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     text-align: justify;
   }
@@ -243,4 +244,8 @@ button a {
   color:white;
   font-size: 25px;
   letter-spacing: 1px;
+}
+
+.monarch-picture {
+  border-radius: 50%
 }
