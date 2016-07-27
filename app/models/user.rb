@@ -9,7 +9,8 @@ class User < ApplicationRecord
     user.last_name = auth['info']['last_name']
     user.age_range = auth.extra.raw_info.age_range
     user.link = auth.extra.raw_info.link
-    user.picture = auth['info']['image']
+    picture = auth['info']['image']
+    user.picture = picture.slice(0..(picture.index('?')))+"width=200&height=200"
     user.locale = auth.extra.raw_info.locale
     user.gender = auth.extra.raw_info.gender
     user.total_reign ||= 0
