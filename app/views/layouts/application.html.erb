@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,700italic,400italic,300italic,100italic,900,700,300,100' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Lemon|Kavoon|Poiret+One|Comfortaa|Lato|Ubuntu|Oxygen|Asap' rel='stylesheet' type='text/css'>
     <%= analytics_init if GoogleAnalytics.valid_tracker? %>
   </head>
@@ -52,9 +53,10 @@
 
         <div class="decl-bottom">
             <img class="monarch-picture" src="<%=current_monarch.picture%>" alt="current monarch" />
-              <p class="reign-number"> <%= "Reign # #{current_reign.id}"%></p>
+              <p class="reign-number"> <%= "Reign # #{current_reign.id} "%></p>
             <span class="created_at"><%= "#{current_reign.created_at.to_f}"%></span>
             <div class="timer"></div>
+            <p class="previous-ruler">Previous ruler: <%= (User.find((Reign.find(current_reign.id-1)).user_id)).first_name %></p>
         </div>
       </div>
 

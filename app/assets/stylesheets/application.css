@@ -14,6 +14,7 @@
  *= require_self
  *= require social-share-button
  */
+
  nav {
    position: fixed;
    top: 0;
@@ -248,4 +249,35 @@ button a {
 
 .monarch-picture {
   border-radius: 50%
+}
+
+.salutation {
+  margin: 0px;
+  margin-top: 13px;
+  font-size: 25px;
+}
+
+.user-stats {
+  margin-top: 36px;
+}
+
+.ranking {
+  margin-left: 20px;
+  margin-top: 6px;
+}
+
+.highlight {
+  font-weight: 900;
+}
+
+.ranking-list {
+  padding-left: 0;
+}
+
+.reign-wrap-up {
+  display: inline;
+}
+
+.previous-ruler {
+  font-size: 12px;
 }

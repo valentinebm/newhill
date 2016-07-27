@@ -8,21 +8,21 @@
     <% if current_user == current_monarch %>
       <p class="compliment-or-call-to-action">Yeah..that's right. YOU are ruling over the hill! So much royalty in you..</p>
     <% else %>
-      <p class="compliment-or-call-to-action">Sign out and Sign in again to return on the throne!</p>
+      <p class="compliment-or-call-to-action">Sign out to return on the throne! It's waiting for your come back..</p>
     <% end %>
 
   <div class="user-stats">
     <% if current_user.total_reign >0 %>
-    <p>In total, you have ruled <% reigns = Reign.where.not(finished: nil).where(user_id: current_user.id) %>
+    <p class="reign-wrap-up">In total, you have ruled <span class="highlight"><% reigns = Reign.where.not(finished: nil).where(user_id: current_user.id) %>
       <%= reigns.length %>
-      times over the hill, for a total duration of <%= humanize(current_user.total_reign) %>.</p>
+      times</span> over the hill, for a total duration of <span class="highlight"><%= humanize(current_user.total_reign) %></span>.</p>
     <% else %>
     <p> This is your first time as <%=current_user.title%> of the Hill. Congrats! Hope you're enjoying this royal feeling..
     </p>
     <% end %>
-    <ul>Out of all <%=User.count %> monarchs, your global rank is:
-      <li><%= current_user.ranking_by_reign_number%> by number of reigns</li>
-      <li><%= current_user.ranking_by_duration%> by total reign duration</li>
+    <ul class="ranking-list">Out of all <%=User.count %> monarchs, your global rank is:
+      <li class="ranking"><%= current_user.ranking_by_reign_number%> by number of reigns</li>
+      <li class="ranking"><%= current_user.ranking_by_duration%> by total reign duration</li>
     </ul>
   </div>
 
