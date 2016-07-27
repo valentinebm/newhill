@@ -322,6 +322,7 @@ button a {
   line-height: 40px;
   display: inline-block;
   margin-bottom: 37px;
+  margin-left: 10px;
 }
 
 .replace-picture {

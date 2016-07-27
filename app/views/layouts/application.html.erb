@@ -69,10 +69,12 @@
         <p class="top-subtitle">By number of reigns</p>
           <ol>
             <% top_ten_by_reign_number.each do |monarch| %>
-              <li>
-                <% reigns = Reign.where.not(finished: nil).where(user_id: monarch.id) %>
-                <%= "#{monarch.title} #{monarch.first_name}: #{reigns.length} reigns" %>
-              </li>
+            <%if monarch.picture == nil %>
+            <p class="replace-picture">yoyoyoy</p>
+              <%else%><img class="top-monarch-picture" src="<%=monarch.picture%>" alt="picture of top monarch" /><%end%>
+              <li class="top-li"><% reigns = Reign.where.not(finished: nil).where(user_id: monarch.id) %>
+                <%= "#{monarch.title} #{monarch.first_name}: #{reigns.length} reigns" %></li>
+                <br>
             <% end %>
           </ol>
         </div>
@@ -82,12 +84,9 @@
           <ol>
             <% top_ten_by_duration.each_with_index do |monarch, index| %>
             <%if monarch.picture == nil %>
-
             <p class="replace-picture">yoyoyoy</p>
-            <%else%><img class="top-monarch-picture" src="<%=monarch.picture%>" alt="picture of top monarch" /><%end%><li class="top-li">
-                <%= "#{index+1}: #{monarch.title} #{monarch.first_name}: #{humanize(monarch.total_reign)}" %>
-
-              </li>
+            <%else%><img class="top-monarch-picture" src="<%=monarch.picture%>" alt="picture of top monarch" /><%end%>
+            <li class="top-li"><%= "#{index+1}: #{monarch.title} #{monarch.first_name}: #{humanize(monarch.total_reign)}" %></li>
               <br>
             <% end %>
           </ol>
