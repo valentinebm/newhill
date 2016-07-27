@@ -99,6 +99,7 @@
     display: inline-block;
     margin-left: 7px;
     margin-right: 7px;
+    font-weight: 700;
   }
 
   .top-ten-container {
@@ -200,6 +201,9 @@
 
   .reign-number {
     margin: 8px;
+    font-size: 20px;
+    font-weight: 600;
+
   }
 
   .personal-message {
@@ -267,11 +271,14 @@ button a {
 .salutation {
   margin: 0px;
   margin-top: 13px;
-  font-size: 25px;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .user-stats {
   margin-top: 36px;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .ranking {
@@ -292,7 +299,8 @@ button a {
 }
 
 .previous-ruler {
-  font-size: 12px;
+  font-size: 13px;
+  margin-top: 8px;
 }
 
 .sparkley {
@@ -324,4 +332,17 @@ button a {
   margin-left: 2px;
   visibility: hidden;
 
+}
+
+.rule-decl {
+  font-weight: 300;
+}
+
+.timer {
+  font-size: 15pxM
+}
+
+.compliment-or-call-to-action {
+  font-size: 17px;
+  font-weight: 400;
 }

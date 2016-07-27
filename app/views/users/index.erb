@@ -21,8 +21,8 @@
     </p>
     <% end %>
     <ul class="ranking-list">Out of all <%=User.count %> monarchs, your global rank is:
-      <li class="ranking"><%= current_user.ranking_by_reign_number%> by number of reigns</li>
-      <li class="ranking"><%= current_user.ranking_by_duration%> by total reign duration</li>
+      <li class="ranking"><%= "##{current_user.ranking_by_reign_number}"%> by number of reigns</li>
+      <li class="ranking"><%= "##{current_user.ranking_by_duration}"%> by total reign duration</li>
     </ul>
   </div>
 
