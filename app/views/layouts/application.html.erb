@@ -80,10 +80,12 @@
         <div class="top-ten by-duration">
         <p class="top-subtitle">By total time ruled over the hill</p>
           <ol>
-            <% top_ten_by_duration.each do |monarch| %>
-              <li>
-                <%= "#{monarch.title} #{monarch.first_name}: #{humanize(monarch.total_reign)}" %>
+            <% top_ten_by_duration.each_with_index do |monarch, index| %>
+              <img class="top-monarch-picture" src="<%=monarch.picture%>" alt="picture of top monarch" /><li class="top-li">
+                <%= "#{index+1}: #{monarch.title} #{monarch.first_name}: #{humanize(monarch.total_reign)}" %>
+
               </li>
+              <br>
             <% end %>
           </ol>
         </div>
