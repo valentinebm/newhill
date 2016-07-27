@@ -302,8 +302,7 @@ button a {
 
 .sparkley {
 
-  background: lighten( $buttonBackground , 10% );
-  color: $buttonColor;
+
   border: none;
 
   padding: 16px 36px;
@@ -315,10 +314,5 @@ button a {
 
   margin: 0 1em 1em;
 
-  &:hover {
 
-    background: $buttonBackground;
-    color: transparentize( $buttonColor,0.8 );
-
-  }
 }
