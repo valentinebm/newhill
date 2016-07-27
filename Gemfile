@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'google-analytics-rails', '1.1.0'
 gem 'social-share-button'
 gem 'figaro'
 gem 'rails_12factor', group: :production

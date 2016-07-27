@@ -7,6 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Lemon|Kavoon|Poiret+One|Comfortaa|Lato|Ubuntu|Oxygen|Asap' rel='stylesheet' type='text/css'>
+    <%= analytics_init if GoogleAnalytics.valid_tracker? %>
   </head>
 
   <body>
