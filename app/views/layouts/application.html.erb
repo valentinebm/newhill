@@ -51,14 +51,10 @@
         </div>
 
         <div class="decl-bottom">
-          <div class="bottom-left">
             <img src="<%=current_monarch.picture%>" alt="current monarch" />
-          </div>
-          <div class="bottom-right">
-            <p> <%= "Reign # #{current_reign.id}"%></p>
+              <p class="reign-number"> <%= "Reign # #{current_reign.id}"%></p>
             <span class="created_at"><%= "#{current_reign.created_at.to_f}"%></span>
             <div class="timer"></div>
-          </div>
         </div>
       </div>
 

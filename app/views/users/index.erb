@@ -1,16 +1,15 @@
-  <h4>Hello
+<div class="personal-message">
+  <h4 class="salutation">Hello
     <% if current_user == current_monarch %>
       <%=current_user.title%>
     <% end %>
     <%= current_user.first_name %> </h4>
 
-  <div class="monarch-greeting">
     <% if current_user == current_monarch %>
-      <p>Yeah..that's right. YOU are ruling over the hill! So much royalty in you..</p>
+      <p class="compliment-or-call-to-action">Yeah..that's right. YOU are ruling over the hill! So much royalty in you..</p>
     <% else %>
-      <p>Sign out and Sign in again to return on the throne!</p>
+      <p class="compliment-or-call-to-action">Sign out and Sign in again to return on the throne!</p>
     <% end %>
-  </div>
 
   <div class="user-stats">
     <% if current_user.total_reign >0 %>
@@ -27,6 +26,8 @@
     </ul>
   </div>
 
-<div class="sharing-buttons">
-    <%= social_share_button_tag("Being royal at the hill") %>
+  <div class="sharing-buttons">
+      <%= social_share_button_tag("Being royal at the hill") %>
+  </div>
+
 </div>
