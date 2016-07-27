@@ -313,6 +313,7 @@ button a {
 .top-monarch-picture {
   border-radius: 50%;
   height: 65px;
+  width: 65px;
   vertical-align: middle;
   display: inline-block;;
 }
