@@ -175,3 +175,7 @@
   .top-subtitle {
     font-size: 22px;
   }
+
+  .created_at {
+    visibility: hidden;
+  }

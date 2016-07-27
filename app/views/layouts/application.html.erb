@@ -18,72 +18,67 @@
     <img class="cloud cloud-1" src="/assets/cloud1" alt="cloud" />
     <img class="cloud cloud-2" src="/assets/cloud2" alt="cloud" />
     <img class="cloud cloud-3" src="/assets/cloud3" alt="cloud" />
-
     <img class= "hill-image" src="/assets/hill.png" alt="The Hill" />
 
     <nav>
       <h1 class="kingdom-title">The Kingdom of the Hill</h1>
       <div class="nav-links">
         <% if current_page?('/reigns') %>
-        <span class="link-1"><%= link_to "Back to the Kingdom of the Hill", '/' %></span>
+          <span class="link-1"><%= link_to "Back to the Kingdom of the Hill", '/' %></span>
         <%else%>
-        <span class="link-1"><%= link_to "History of all reigns of The Hill", "/reigns" %></span>
+          <span class="link-1"><%= link_to "History of all reigns of The Hill", "/reigns" %></span>
         <% end %>
 
         <% if current_user %>
-        <span class="link-2"><%= link_to "Sign out", signout_path %></span>
+          <span class="link-2"><%= link_to "Sign out", signout_path %></span>
         <% else %>
-
           <span class="link-2"><%= link_to "Sign in to rule over The Hill", "/auth/facebook" %></span>
-
-      <% end %>
+        <% end %>
       </div>
     </nav>
 
+    <% unless current_page?('/reigns') %>
+      <div class="current-reign-decl">
+        <h2 class="monarch-decl">
+          <%= "#{current_monarch.title} #{current_monarch.first_name}" %>
+        </h2>
+        <h2 class="rule-decl">is ruling over the hill!</h2>
+        <p> <%= "Reign # #{current_reign.id}"%></p>
+        <span class="created_at"><%= "#{current_reign.created_at.to_f}"%></span>
+        <div class="timer"></div>
+      </div>
+    <% end %>
+
     <%= yield %>
 
-<% unless current_page?('/reigns') %>
-<div class="top-ten-container">
-  <h3 class="h3-top">Top 10 monarchs</h3>
-      <div class="top-ten by-reign-number">
-      <p class="top-subtitle">By number of reigns</p>
-        <ol>
-          <% top_ten_by_reign_number.each do |monarch| %>
-            <li>
-              <% reigns = Reign.where.not(finished: nil).where(user_id: monarch.id) %>
-              <%= "#{monarch.title} #{monarch.first_name}: #{reigns.length} reigns" %>
-            </li>
-          <% end %>
-        </ol>
-      </div>
-
-      <div class="top-ten by-duration">
-      <p class="top-subtitle">By total time ruled over the hill</p>
-        <ol>
-          <% top_ten_by_duration.each do |monarch| %>
-            <li>
-              <%= "#{monarch.title} #{monarch.first_name}: #{humanize(monarch.total_reign)}" %>
-            </li>
-          <% end %>
-        </ol>
-      </div>
-
-        <!-- <div class="top-ten-reigns">
-        <% unless current_page?('/reigns') %>
-        <h3>Top 10 individual reigns</h3>
-          <p>by duration </p>
+  <% unless current_page?('/reigns') %>
+  <div class="top-ten-container">
+    <h3 class="h3-top">Top 10 monarchs</h3>
+        <div class="top-ten by-reign-number">
+        <p class="top-subtitle">By number of reigns</p>
           <ol>
-            <% top_ten_reigns.each do |reign| %>
-              <% monarch = User.find(reign.user_id) %>
+            <% top_ten_by_reign_number.each do |monarch| %>
               <li>
-                <%= "#{monarch.title} #{monarch.first_name}: #{humanize(reign.duration)}" %>
+                <% reigns = Reign.where.not(finished: nil).where(user_id: monarch.id) %>
+                <%= "#{monarch.title} #{monarch.first_name}: #{reigns.length} reigns" %>
               </li>
             <% end %>
           </ol>
-          <% end %>
-        </div>   -->
-  </div>
-<% end %>
+        </div>
+
+        <div class="top-ten by-duration">
+        <p class="top-subtitle">By total time ruled over the hill</p>
+          <ol>
+            <% top_ten_by_duration.each do |monarch| %>
+              <li>
+                <%= "#{monarch.title} #{monarch.first_name}: #{humanize(monarch.total_reign)}" %>
+              </li>
+            <% end %>
+          </ol>
+        </div>
+
+    </div>
+  <% end %>
 
   </body>
 </html>

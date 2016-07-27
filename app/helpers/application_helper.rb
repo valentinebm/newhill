@@ -9,10 +9,6 @@ module ApplicationHelper
     }.compact.reverse.join(' ')
   end
 
-  def top_ten_reigns
-    Reign.where.not(duration: nil).order(duration: :desc).limit(10)
-  end
-
   def top_ten_by_duration
     User.where.not(total_reign: 0).order(total_reign: :desc).limit(10)
   end
@@ -20,5 +16,9 @@ module ApplicationHelper
   def top_ten_by_reign_number
     User.joins("left join reigns on reigns.user_id = users.id").group(:id).order("count(*) desc").limit(10)
   end
+
+  def current_reign
+    Reign.last
+  end 
 
 end
