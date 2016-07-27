@@ -2,7 +2,7 @@
   <h2 class="history-title">The history of the Kingdom of the Hill</h2>
   <h3>All reigns in chronological order</h3>
   <div class="reigns">
-    <% @reigns.each_with_index do |reign, index| %>
+    <% @reigns.to_enum.with_index.reverse_each do |reign, index| %>
       <div class="monarch-container">
         <span class="index"> <%= "#{index +1}." %> </span>
         <% monarch = User.find(reign.user_id) %>
