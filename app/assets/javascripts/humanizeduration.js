@@ -537,4 +537,4 @@
   } else {
     this.humanizeDuration = humanizeDuration
   }
-})(); 
+})();
