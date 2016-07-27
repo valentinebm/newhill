@@ -39,14 +39,29 @@
 
     <% unless current_page?('/reigns') %>
       <div class="current-reign-decl">
-        <h2 class="monarch-decl">
-          <%= "#{current_monarch.title} #{current_monarch.first_name}" %>
-        </h2>
-        <h2 class="rule-decl">is ruling over the hill!</h2>
-        <p> <%= "Reign # #{current_reign.id}"%></p>
-        <span class="created_at"><%= "#{current_reign.created_at.to_f}"%></span>
-        <div class="timer"></div>
+        <div class="decl-top">
+          <div class="decl-line-1">
+            <img class="crown" src="/assets/crown.png" alt="crown" />
+            <h2 class="monarch-decl">
+              <%= "#{current_monarch.title} #{current_monarch.first_name}" %>
+            </h2>
+            <img class="crown" src="/assets/crown.png" alt="crown" />
+          </div>
+          <h2 class="rule-decl">is ruling over the hill!</h2>
+        </div>
+
+        <div class="decl-bottom">
+          <div class="bottom-left">
+            <%= current_monarch.picture %>
+          </div>
+          <div class="bottom-right">
+            <p> <%= "Reign # #{current_reign.id}"%></p>
+            <span class="created_at"><%= "#{current_reign.created_at.to_f}"%></span>
+            <div class="timer"></div>
+          </div>
+        </div>
       </div>
+
     <% end %>
 
     <%= yield %>
