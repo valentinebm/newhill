@@ -1,6 +1,6 @@
 class ReignsController < ApplicationController
   def index
-    @reigns = Reign.all
+    @reigns = Reign.order(created_at: :desc)
     end
 
 end
