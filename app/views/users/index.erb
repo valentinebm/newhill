@@ -3,7 +3,7 @@
     <% if current_user == current_monarch %>
       <%=current_user.title%>
     <% end %>
-    <%= current_user.first_name %> </h4>
+    <%= "#{current_user.first_name}," %> </h4>
 
     <% if current_user == current_monarch %>
       <p class="compliment-or-call-to-action">Yeah..that's right. YOU are ruling over the hill! So much royalty in you..</p>
