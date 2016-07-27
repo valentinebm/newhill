@@ -42,8 +42,6 @@ class User < ApplicationRecord
     end
   end
 
-
-
   def title
     if self.gender == 'male'
       title = 'King'

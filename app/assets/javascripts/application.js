@@ -37,8 +37,8 @@ $(function () {
 
 }
 
-moveBackAndForth($('.cloud-1'), 5000)
-moveBackAndForth($('.cloud-2'), 6000)
-moveBackAndForth($('.cloud-3'), 4000)
+// moveBackAndForth($('.cloud-1'), 5000)
+// moveBackAndForth($('.cloud-2'), 6000)
+// moveBackAndForth($('.cloud-3'), 4000)
 
 })
