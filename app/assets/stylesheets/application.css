@@ -129,7 +129,7 @@
     margin-top: 10px;
     display: inline-block;
     vertical-align: top;
-    width: 40%;
+    width: 49%;
   }
 
   ol {
@@ -321,4 +321,12 @@ button a {
 .top-li {
   line-height: 40px;
   display: inline-block;
+  margin-bottom: 37px;
+}
+
+.replace-picture {
+  display: inline;
+  margin-left: 2px;
+  visibility: hidden;
+
 }
