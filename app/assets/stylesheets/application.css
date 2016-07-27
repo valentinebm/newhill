@@ -46,7 +46,25 @@
     position: fixed;
     bottom: -25px;
     z-index: -1;
+    background: #3EF6AC;
+    animation: myfirst 5s;
+    -moz-animation:myfirst 5s infinite;
+    -webkit-animation:myfirst 5s infinite;
   }
+
+  @-moz-keyframes myfirst
+  {
+    0% {background-color:#3EF6AC;}
+    50% {background-color:#169160;}
+    100% {background-color:#3EF6AC;}
+  }
+
+  @-webkit-keyframes myfirst {
+    0% {background-color:#3EF6AC;}
+    50% {background-color:#169160;}
+    100% {background-color:#3EF6AC;}
+  }
+
   .cloud {
     position: fixed;
     z-index: -1;
@@ -280,4 +298,27 @@ button a {
 
 .previous-ruler {
   font-size: 12px;
+}
+
+.sparkley {
+
+  background: lighten( $buttonBackground , 10% );
+  color: $buttonColor;
+  border: none;
+
+  padding: 16px 36px;
+  font-weight: normal;
+
+  border-radius: 3px;
+  transition: all 0.25s ease;
+
+
+  margin: 0 1em 1em;
+
+  &:hover {
+
+    background: $buttonBackground;
+    color: transparentize( $buttonColor,0.8 );
+
+  }
 }
