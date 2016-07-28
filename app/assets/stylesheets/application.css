@@ -232,6 +232,8 @@
 
   .link-2 {
     margin-left: 40px;
+    padding-right: 8px;
+
   }
 
   .top-subtitle {
@@ -246,6 +248,7 @@
   .crown {
     height: 40px;
     display: inline-block;
+    margin-bottom: 6px;
   }
 
   .reign-number {
