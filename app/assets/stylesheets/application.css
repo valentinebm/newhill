@@ -19,6 +19,7 @@
    position: fixed;
    top: 0;
    left: 8px;
+   width: 98%;
  }
 
   body {
@@ -39,6 +40,8 @@
     margin-top: 5px;
     margin-left: 10px;
     margin-bottom: 5px;
+    float: left;
+    display: inline-block;
   }
 
   .hill-image {
@@ -215,18 +218,17 @@
 
   .nav-links {
     font-size: 20px;
-    margin-left: 15px;
-    width: 95%
+    display: inline-block;
+    float: right;
+    line-height: 45px;
   }
 
-  .link-1 {
-    float:left;
+  .link {
     display: inline-block;
   }
 
   .link-2 {
-    float:right;
-    display: inline-block;
+    margin-left: 40px;
   }
 
   .top-subtitle {

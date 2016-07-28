@@ -26,13 +26,13 @@
       <h1 class="kingdom-title">The Kingdom of the Hill</h1>
       <div class="nav-links">
         <% if current_page?('/reigns') %>
-          <span class="link-1"><%= link_to "Back to the Kingdom of the Hill", '/' %></span>
+          <div class="link link-1"><%= link_to "Back to the Kingdom of the Hill", '/' %></div>
         <%else%>
-          <span class="link-1"><%= link_to "History of all reigns of The Hill", "/reigns" %></span>
+          <div class="link link-1"><%= link_to "History of all reigns of The Hill", "/reigns" %></div>
         <% end %>
 
         <% if current_user %>
-          <span class="link-2"><%= link_to "Sign out", signout_path %></span>
+          <div class="link link-2"><%= link_to "Sign out", signout_path %></div>
         <% end %>
       </div>
     </nav>
