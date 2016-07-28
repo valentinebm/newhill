@@ -45,7 +45,7 @@
     width: 100%;
     position: fixed;
     bottom: -25px;
-    z-index: -1;
+    z-index: -2;
     background: #3EF6AC;
     animation: myfirst 5s;
     -moz-animation:myfirst 5s infinite;
@@ -68,17 +68,28 @@
   .cloud {
     position: fixed;
     z-index: -1;
+
   }
 
   .cloud-1 {
     width: 15%;
     margin-left: 10px;
-    margin-top: 90px;
+    margin-top: 300px;
+    -webkit-animation: moveclouds 15s linear infinite;
+    -moz-animation: moveclouds 15s linear infinite;
+    -o-animation: moveclouds 15s linear infinite;
+    opacity: 0.7;
   }
 
   .cloud-2 {
     width: 25%;
     right: 20px;
+    left: 200px;
+    z-index: 0;
+    opacity: 0.6;
+    -webkit-animation: moveclouds 25s linear infinite;
+    -moz-animation: moveclouds 25s linear infinite;
+    -o-animation: moveclouds 25s linear infinite;
   }
 
   .cloud-3 {
@@ -86,6 +97,35 @@
     right: 100px;
     width: 10%;
     z-index: 0;
+
+    -webkit-animation: moveclouds 20s linear infinite;
+  	-moz-animation: moveclouds 20s linear infinite;
+  	-o-animation: moveclouds 20s linear infinite;
+  }
+
+  .cloud-4 {
+    /*top: 350px;
+    right: 100px;*/
+    width: 20%;
+    z-index: 0;
+    margin-top: 174px;
+
+    /*-webkit-animation: moveclouds 20s linear infinite;
+    -moz-animation: moveclouds 20s linear infinite;
+    -o-animation: moveclouds 20s linear infinite;*/
+  }
+
+  @-webkit-keyframes moveclouds {
+  	0% {margin-left: 1000px;}
+  	100% {margin-left: -1000px;}
+  }
+  @-moz-keyframes moveclouds {
+  	0% {margin-left: 1000px;}
+  	100% {margin-left: -1000px;}
+  }
+  @-o-keyframes moveclouds {
+  	0% {margin-left: 1000px;}
+  	100% {margin-left: -1000px;}
   }
 
   .current-reign-decl {
