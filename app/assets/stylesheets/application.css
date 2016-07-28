@@ -453,16 +453,21 @@ button a {
   }
 }
 
-a:link {
+.link a:link {
   color: #504c4c;
   text-decoration: none;
   font-weight: 300;
 }
 
-a:visited {
+.link a:visited {
   color: #504c4c;
 }
 
 a:hover {
   opacity: 0.3;
+}
+
+.hp-link {
+  color:white;
+  font-weight: 300;
 }
