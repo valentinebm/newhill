@@ -35,7 +35,7 @@
 
   .kingdom-title {
     font-family: 'Slackey', cursive;
-    color: rgb(255, 251, 0);
+    color: #d28b2f;
     text-shadow: rgb(154, 153, 90) 4px 4px 7px;
     letter-spacing: 1px;
     font-size: 30px;
@@ -470,12 +470,4 @@ a:hover {
 .hp-link {
   color:white;
   font-weight: 300;
-}
-
-.castle-image {
-  height: 238px;
-  position: fixed;
-  top: 288px;
-  left: 340px;
-  z-index: -1;
 }
