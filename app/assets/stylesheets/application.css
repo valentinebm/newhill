@@ -94,7 +94,7 @@
   }
 
   .monarch-decl {
-    font-size: 65px;
+    font-size: 70px;
     margin: 0px;
     display: inline-block;
     margin-left: 7px;
@@ -115,7 +115,7 @@
     }
 
   .h3-top {
-    font-size: 35px;
+    font-size: 40px;
     margin: 0px;
     text-align: center;
     margin-bottom: 20px;
@@ -139,7 +139,7 @@
   }
 
   .history-title {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 400;
     text-align: center;
     margin-top : 27px;
@@ -163,7 +163,7 @@
   }
 
   .appellation {
-    font-size: 18px;
+    font-size: 23px;
     text-align: left;
     font-weight: 500;
   }
@@ -174,7 +174,7 @@
   }
 
   .nav-links {
-    font-size: 15px;
+    font-size: 20px;
     margin-left: 15px;
     width: 95%
   }
@@ -190,7 +190,7 @@
   }
 
   .top-subtitle {
-    font-size: 22px;
+    font-size: 27px;
   }
 
   .created_at {
@@ -205,7 +205,7 @@
 
   .reign-number {
     margin: 8px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
 
   }
@@ -221,7 +221,7 @@
     margin-bottom: 30px;
     border-radius: 24px;
     color: #585151;
-    height: 328px;
+    height: 387px;
   }
 
   button {
@@ -266,7 +266,7 @@
 button a {
   text-decoration: none;
   color:white;
-  font-size: 25px;
+  font-size: 30px;
   letter-spacing: 1px;
 }
 
@@ -277,13 +277,13 @@ button a {
 .salutation {
   margin: 0px;
   margin-top: 13px;
-  font-size: 22px;
+  font-size: 27px;
   font-weight: 500;
 }
 
 .user-stats {
   margin-top: 36px;
-  font-size: 17px;
+  font-size: 23px;
   font-weight: 400;
 }
 
@@ -294,7 +294,7 @@ button a {
 
 .highlight {
   font-weight: 900;
-  font-size: 17px;
+  font-size: 23px;
 }
 
 .ranking-list {
@@ -306,7 +306,7 @@ button a {
 }
 
 .previous-ruler {
-  font-size: 13px;
+  font-size: 18px;
   margin-top: 8px;
 }
 
@@ -344,31 +344,31 @@ button a {
 .rule-decl {
   font-weight: 300;
   margin-top: 10px;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .timer {
-  font-size: 15pxM
+  font-size: 40px;
 }
 
 .compliment-or-call-to-action {
-  font-size: 17px;
+  font-size: 23px;
   font-weight: 400;
 }
 
 .history-subtitle {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 300;
   margin-left: 40px;
 }
 
 .reign-dates {
-  font-size: 17px;
+  font-size: 23px;
   font-weight: 300;
 }
 
 .reign-duration {
-  font-size: 17px;
+  font-size: 23px;
   font-weight: 400;
 }
 
@@ -387,6 +387,7 @@ button a {
   width: 250px !important;
   height: 80px !important;
   background-size: 50px !important;
+  background-position: 5% !important;
 }
 
 .ssb-facebook {
