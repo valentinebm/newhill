@@ -371,3 +371,38 @@ button a {
   font-size: 17px;
   font-weight: 400;
 }
+
+.sharing-buttons {
+  height: 100px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.social-share-button {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.ssb-icon {
+  width: 250px !important;
+  height: 80px !important;
+  background-size: 50px !important;
+}
+
+.ssb-facebook {
+  background-color: rgb(39, 96, 216);
+  float: right;
+}
+
+.ssb-twitter {
+  background-color: rgb(29, 159, 239);
+  float: left;
+}
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: 100px;
+    width: 287px;
+  }
+}
