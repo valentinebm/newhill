@@ -471,3 +471,11 @@ a:hover {
   color:white;
   font-weight: 300;
 }
+
+.castle-image {
+  height: 238px;
+  position: fixed;
+  top: 288px;
+  left: 340px;
+  z-index: -1;
+}
