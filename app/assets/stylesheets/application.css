@@ -417,7 +417,7 @@ button a {
   font-weight: 400;
 }
 
-.sharing-buttons {
+.sharing {
   height: 100px;
   margin-top: 70px;
   margin-bottom: 70px;
@@ -426,13 +426,15 @@ button a {
 .social-share-button {
   width: 60%;
   margin: 0 auto;
+  width: 400px;
 }
 
 .ssb-icon {
-  width: 250px !important;
+  width: 140px !important;
   height: 80px !important;
   background-size: 50px !important;
   background-position: 5% !important;
+  border-radius: 4px;
 }
 
 .ssb-facebook {
@@ -470,4 +472,13 @@ a:hover {
 .hp-link {
   color:white;
   font-weight: 300;
+}
+
+.sharing {
+  height: 200px;
+  margin-bottom: 0px;
+}
+.h3-sharing {
+  text-align: center;
+  font-size: 40px;
 }
