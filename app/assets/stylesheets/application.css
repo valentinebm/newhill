@@ -401,7 +401,7 @@ button a {
 
 .social-share-button {
   .ssb-icon {
-    background-size: $size $size;
+    background-size: 50px !important;
     height: 100px;
     width: 287px;
   }
