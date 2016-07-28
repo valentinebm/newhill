@@ -18,23 +18,23 @@
 
 $(function () {
 
-  function moveBackAndForth(targetElement, speed){
-    targetElement.animate({left: '+=60px'},
-  {
-    duration: speed,
-    complete: function()
-    {
-        targetElement.animate({left: '-=60px'},
-        {
-          duration: speed,
-          complete: function()
-          {
-            moveBackAndForth(targetElement, speed)
-          }
-      })
-    }
-  })
-}
+//   function moveBackAndForth(targetElement, speed){
+//     targetElement.animate({left: '+=60px'},
+//   {
+//     duration: speed,
+//     complete: function()
+//     {
+//         targetElement.animate({left: '-=60px'},
+//         {
+//           duration: speed,
+//           complete: function()
+//           {
+//             moveBackAndForth(targetElement, speed)
+//           }
+//       })
+//     }
+//   })
+// }
 
 function getElapsedSecondsSince(creationTime, element) {
   setInterval(function () {
@@ -53,6 +53,23 @@ function getElapsedSecondsSince(creationTime, element) {
 }
 
 getElapsedSecondsSince('.created_at', '.timer');
+
+  var scroll_start = 0;
+  var startchange = $('.monarch-decl');
+  var offset = startchange.offset();
+  $(document).scroll(function(){
+
+    scroll_start = $(this).scrollTop();
+    if(scroll_start > offset.top) {
+      $('nav').css("background-color", "rgba(62, 246, 172, 0.7)");
+    }
+      else {
+        $('nav').css('background-color', "transparent");
+      }
+
+  })
+
+
 
 // moveBackAndForth($('.cloud-1'), 5000)
 // moveBackAndForth($('.cloud-2'), 6000)

@@ -17,9 +17,10 @@
 
  nav {
    position: fixed;
-   top: 0;
-   left: 8px;
-   width: 98%;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    /*background-color: rgba(105, 105, 105, 0.12);*/
  }
 
   body {
@@ -220,7 +221,8 @@
     font-size: 20px;
     display: inline-block;
     float: right;
-    line-height: 45px;
+    line-height: 55px;
+    margin-right: 15px;
   }
 
   .link {
@@ -448,4 +450,13 @@ button a {
     height: 100px;
     width: 287px;
   }
+}
+
+a:link {
+  color: #504c4c;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #504c4c;
 }
