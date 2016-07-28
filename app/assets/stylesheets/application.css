@@ -85,7 +85,7 @@
     width: 25%;
     right: 20px;
     left: 200px;
-    z-index: 0;
+    z-index: -1;
     opacity: 0.6;
     -webkit-animation: moveclouds 25s linear infinite;
     -moz-animation: moveclouds 25s linear infinite;
@@ -311,7 +311,7 @@ button a {
 }
 
 .monarch-picture {
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 .salutation {
