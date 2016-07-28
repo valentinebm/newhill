@@ -61,6 +61,10 @@
     <% end %>
 
     <%= yield %>
+    
+    <div class="sharing-buttons">
+        <%= social_share_button_tag("Being royal at the hill") %>
+    </div>
 
   <% unless current_page?('/reigns') %>
   <div class="top-ten-container">
