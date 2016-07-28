@@ -61,10 +61,12 @@ getElapsedSecondsSince('.created_at', '.timer');
 
     scroll_start = $(this).scrollTop();
     if(scroll_start > offset.top) {
-      $('nav').css("background-color", "rgba(62, 246, 172, 1)");
+      $('nav').css("background-color", "rgba(253, 253, 253, 0.5)");
+      $('nav').css("box-shadow", "0 2px 4px rgba(0, 0, 0, 0.17)");
     }
       else {
         $('nav').css('background-color', "transparent");
+        $('nav').css("box-shadow", "");
       }
 
   })

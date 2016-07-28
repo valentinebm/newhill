@@ -34,7 +34,7 @@
   }
 
   .kingdom-title {
-    font-family: 'Lemon', cursive;
+    font-family: 'Slackey', cursive;
     color: rgb(255, 251, 0);
     text-shadow: rgb(154, 153, 90) 4px 4px 7px;
     letter-spacing: 1px;
@@ -355,14 +355,14 @@ button a {
   margin-top: 8px;
 }
 
-.sparkley {
+/*.sparkley {
   border: none;
   padding: 16px 36px;
   font-weight: normal;
   border-radius: 3px;
   transition: all 0.25s ease;
   margin: 0 1em 1em;
-}
+}*/
 
 .top-monarch-picture {
   border-radius: 50%;
@@ -456,8 +456,13 @@ button a {
 a:link {
   color: #504c4c;
   text-decoration: none;
+  font-weight: 300;
 }
 
 a:visited {
   color: #504c4c;
+}
+
+a:hover {
+  opacity: 0.3;
 }
