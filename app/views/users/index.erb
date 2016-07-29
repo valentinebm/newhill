@@ -6,14 +6,15 @@
     <%= "#{current_user.first_name}," %> </h4>
 
     <% if current_user == current_monarch %>
-      <p class="compliment-or-call-to-action">Yeah..that's right. YOU are ruling over the hill! </p>
-      <p>So much royalty in you..</p>
+      <p class="compliment-or-call-to-action line-one">Yeah..that's right. YOU are ruling over the hill! </p>
+      <p class="compliment-or-call-to-action line-two">So much royalty in you..</p>
     <% else %>
       <% if current_user.total_reign <=0 %>
-      <p class="compliment-or-call-to-action">Welcome to the Kingdom of the Hill! Hope you're enjoying the royal feeling...</p>
+      <p class="compliment-or-call-to-action line-one">Welcome to the Kingdom of the Hill!</p>
+      <p class="compliment-or-call-to-action line-two">Hope you're enjoying the royal feeling...</p>
       <% else %>
-      <p class="compliment-or-call-to-action no-longer">Oh no! You are no longer ruling over the hill.</p>
-      <p class="compliment-or-call-to-action warm-throne">But the throne is warm and waiting for you to come back..</p>
+      <p class="compliment-or-call-to-action line-one">Oh no! You are no longer ruling over the hill.</p>
+      <p class="compliment-or-call-to-action line-two">But the throne is warm and waiting for you to come back..</p>
       <% end %>
       <div class="action">
         <p class="compliment-or-call-to-action">Choose the <strong>weapon</strong> with which you want to assault <%="#{current_monarch.title} #{current_monarch.first_name}"%></p>
@@ -42,7 +43,7 @@
   <% end %>
 </div>
 
-<div class="sharing">
+<!-- <div class="sharing">
     <h3 class="h3-sharing">Sharing is ruling</h3>
     <%= social_share_button_tag("YEAH! I'm a monarch of the Kingdom of the Hill! #RulingOverTheHill") %>
-</div>
+</div> -->
