@@ -269,10 +269,13 @@
     margin-bottom: 30px;
     border-radius: 24px;
     color: #585151;
-    height: 413px;
+    height: 560px;
+    font-size: 20px;
+    position: relative;
+
   }
 
-  button {
+  .button {
   padding: 15px 40px;
   background: #0099CC;
   border: none;
@@ -330,9 +333,11 @@ button a {
 }
 
 .user-stats {
-  margin-top: 36px;
-  font-size: 23px;
+  margin-top: 20px;
+  font-size: 20px;
   font-weight: 400;
+  position: absolute;
+  bottom: 20px;
 }
 
 .ranking {
@@ -347,10 +352,12 @@ button a {
 
 .ranking-list {
   padding-left: 0;
+  font-size: 20px;
 }
 
 .reign-wrap-up {
   display: inline;
+  font-size: 20px;
 }
 
 .previous-ruler {
@@ -400,7 +407,7 @@ button a {
 }
 
 .compliment-or-call-to-action {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -484,4 +491,37 @@ a:hover {
 .h3-sharing {
   text-align: center;
   font-size: 40px;
+}
+
+.kingdom-title a:link {
+  text-decoration: none;
+  color: #d28b2f;
+}
+
+.kingdom-title a:visited {
+  color: #d28b2f;
+}
+
+.kingdom-title a:hover {
+  opacity: 0.7;
+}
+
+#reign_weapon {
+  width: 100%;
+  height: 23px;
+  font-size: 20px;
+}
+
+.new_reign {
+  margin: 0 auto;
+  width: 190px;
+}
+
+.take-over {
+  font-size: 16px;
+  padding: 0px;
+  width: 200px;
+  height: 60px;
+  margin-top: 16px;
+  margin-bottom: 50px;
 }

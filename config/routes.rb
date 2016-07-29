@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :users
+  # resources :users
+
+  get '/users', to: 'users#index'
+  
+  post '/reigns', to: 'users#update'
 
   root 'welcome#index'
 
@@ -9,6 +13,7 @@ Rails.application.routes.draw do
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
   get '/reigns', to: 'reigns#index'
+
 
 
 end

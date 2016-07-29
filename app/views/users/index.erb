@@ -6,9 +6,26 @@
     <%= "#{current_user.first_name}," %> </h4>
 
     <% if current_user == current_monarch %>
-      <p class="compliment-or-call-to-action">Yeah..that's right. YOU are ruling over the hill! So much royalty in you..</p>
+      <p class="compliment-or-call-to-action">Yeah..that's right. YOU are ruling over the hill! </p>
+      <p>So much royalty in you..</p>
     <% else %>
-      <p class="compliment-or-call-to-action">Oh no! You're no longer ruling over the hill. Sign out to ascend on the throne again! It's warm and waiting for you to come back..</p>
+      <% if current_user.total_reign <=0 %>
+      <p class="compliment-or-call-to-action">Welcome to the Kingdom of the Hill! Hope you're enjoying the royal feeling...</p>
+      <% else %>
+      <p class="compliment-or-call-to-action">Oh no! You are no longer ruling over the hill.</p>
+      <p class="compliment-or-call-to-action">But the throne is warm and waiting for you to come back..</p>
+      <% end %>
+      <div class="action">
+        <p class="compliment-or-call-to-action">Choose the <strong>weapon</strong> with which you want to assault <%="#{current_monarch.title} #{current_monarch.first_name}"%></p>
+        <div class="royal-form">
+          <%= form_for [@reign] do |f| %>
+            <%= f.text_field :weapon, required: true %>
+            <br>
+          <%=f.submit "Take over the throne", :class => "button take-over"%>
+        </div>
+
+      </div>
+      <% end %>
     <% end %>
 
   <div class="user-stats">
@@ -16,15 +33,13 @@
     <p class="reign-wrap-up">In total, you have ruled <span class="highlight"><% reigns = Reign.where.not(finished: nil).where(user_id: current_user.id) %>
       <%= reigns.length %>
       times</span> over the hill, for a total duration of <span class="highlight"><%= humanize(current_user.total_reign) %></span>.</p>
-    <% else %>
-    <p> This is your first time as <%=current_user.title%> of the Hill. Congrats! Hope you're enjoying this royal feeling..
-    </p>
-    <% end %>
+
     <ul class="ranking-list">Out of all <%=User.count %> monarchs, your global rank is:
       <li class="ranking"><%= "##{current_user.ranking_by_reign_number}"%> by number of reigns</li>
       <li class="ranking"><%= "##{current_user.ranking_by_duration}"%> by total reign duration</li>
     </ul>
   </div>
+  <% end %>
 </div>
 
 <div class="sharing">
