@@ -262,14 +262,14 @@
     margin: 0 auto;
     width: 60%;
     background-color: rgba(253, 253, 253, 0.55);
-    padding-left: 70px;
+    padding-left: 50px;
     padding-right: 58px;
-    padding-top: 41px;
+    padding-top: 20px;
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 24px;
     color: #585151;
-    height: 560px;
+    height: 540px;
     font-size: 20px;
     position: relative;
 
@@ -524,4 +524,12 @@ a:hover {
   height: 60px;
   margin-top: 16px;
   margin-bottom: 50px;
+}
+
+.warm-throne {
+  margin-top: 0px;
+}
+
+.no-longer {
+  margin-bottom: 3px;
 }

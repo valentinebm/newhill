@@ -12,8 +12,8 @@
       <% if current_user.total_reign <=0 %>
       <p class="compliment-or-call-to-action">Welcome to the Kingdom of the Hill! Hope you're enjoying the royal feeling...</p>
       <% else %>
-      <p class="compliment-or-call-to-action">Oh no! You are no longer ruling over the hill.</p>
-      <p class="compliment-or-call-to-action">But the throne is warm and waiting for you to come back..</p>
+      <p class="compliment-or-call-to-action no-longer">Oh no! You are no longer ruling over the hill.</p>
+      <p class="compliment-or-call-to-action warm-throne">But the throne is warm and waiting for you to come back..</p>
       <% end %>
       <div class="action">
         <p class="compliment-or-call-to-action">Choose the <strong>weapon</strong> with which you want to assault <%="#{current_monarch.title} #{current_monarch.first_name}"%></p>
