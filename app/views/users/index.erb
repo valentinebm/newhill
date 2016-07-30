@@ -18,7 +18,7 @@
       <p class="compliment-or-call-to-action line-two">But the throne is warm and waiting for you to come back..</p>
       <% end %>
       <div class="action">
-        <p class="compliment-or-call-to-action">Choose the <strong>weapon</strong> with which you want to assault <%="#{current_monarch.title} #{current_monarch.first_name}"%></p>
+        <p class="compliment-or-call-to-action">Choose the <strong>weapon</strong> with which you want to conqueer the throne:</p>
         <div class="royal-form">
           <%= form_for [@reign] do |f| %>
             <%= f.text_field :weapon, required: true %>
