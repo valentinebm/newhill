@@ -6,14 +6,15 @@
     <%= "#{current_user.first_name}," %> </h4>
 
     <% if current_user == current_monarch %>
-      <p class="compliment-or-call-to-action line-one">Yeah..that's right. YOU are ruling over the hill! </p>
-      <p class="compliment-or-call-to-action line-two">So much royalty in you..</p>
+      <p class="compliment-or-call-to-action line-one">Yeah..that's right. YOU are ruling over the hill!</p>
+      <p class="compliment-or-call-to-action line-two">You've conquered the throne with such virtuosity. So much royalty in you..</p>
     <% else %>
       <% if current_user.total_reign <=0 %>
       <p class="compliment-or-call-to-action line-one">Welcome to the Kingdom of the Hill!</p>
       <p class="compliment-or-call-to-action line-two">Hope you're enjoying the royal feeling...</p>
       <% else %>
-      <p class="compliment-or-call-to-action line-one">Oh no! You are no longer ruling over the hill.</p>
+      <p class="compliment-or-call-to-action line-one">Oh no! You are no longer ruling over the hill. You've been usurped by <strong><%="#{usurper.title} #{usurper.first_name}"%></strong>
+        with the following weapon: <strong><%="#{deadly_weapon}"%></strong>.</p>
       <p class="compliment-or-call-to-action line-two">But the throne is warm and waiting for you to come back..</p>
       <% end %>
       <div class="action">
