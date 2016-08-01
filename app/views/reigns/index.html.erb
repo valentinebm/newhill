@@ -4,9 +4,9 @@
   <div class="reigns">
     <% @reigns.to_enum.with_index.reverse_each do |reign, index| %>
       <div class="monarch-container">
-        <span class="history-index"> <%= "#{index +1}." %> </span>
+        <span class="history-index table-cell"> <%= "#{index +1}." %> </span>
         <% monarch = User.find(reign.user_id) %>
-        <span class="appellation">
+        <span class="appellation table-cell">
           <% if monarch.gender == 'male' %>
           King
           <% elsif monarch.gender == 'female' %>
@@ -16,20 +16,20 @@
           <% end %>
           <%= "#{monarch.first_name}"%>
         </span>
-        <span class="reign-dates">
+        <span class="reign-dates table-cell">
         <%="#{reign.created_at.to_formatted_s(:long_ordinal)}"%>
         <% unless reign.finished == nil%>
           <%="- #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
         <% end %>
         </span>
 
-        <span class="reign-duration">
+        <span class="reign-duration table-cell">
           <% unless reign.finished == nil %>
             <%="#{humanize(reign.duration)}"%>
           <% end %>
         </span>
 
-        <span class="reign-weapon">
+        <span class="reign-weapon table-cell">
             <%="#{reign.weapon}"%>
         </span>
 

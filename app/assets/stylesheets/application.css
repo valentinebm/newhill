@@ -179,7 +179,7 @@
   }
 
   .kingdom-history {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
   }
 
@@ -207,12 +207,18 @@
     table-layout: fixed;
   }
 
+
   .appellation {
     font-size: 20px;
     text-align: left;
     font-weight: 500;
+    text-align: left;
   }
 
+.table-cell {
+    display: table-cell;
+    text-align: center;
+}
 
   .nav-links {
     font-size: 20px;
