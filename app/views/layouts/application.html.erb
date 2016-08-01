@@ -76,7 +76,7 @@
           <p class="top-subtitle">By number of reigns</p>
             <ol>
               <% top_ten_by_reign_number.each_with_index do |monarch, index| %>
-                <li class="top-li back-color1">   <div class="index"><%=(index+1)%></div> <img class="top-monarch-picture" src="<%=monarch.picture%>" alt="picture of top monarch" />
+                <li class="top-li back-color1">   <div class="top-index"><%=(index+1)%></div> <img class="top-monarch-picture" src="<%=monarch.picture%>" alt="picture of top monarch" />
                   <% reigns = Reign.where.not(finished: nil).where(user_id: monarch.id) %>
                   <span class="top-data">
                     <div class="top-name"><%= "#{monarch.title} #{monarch.first_name}"%></div>
@@ -92,7 +92,7 @@
           <p class="top-subtitle">By total time ruled over the hill</p>
             <ol>
               <% top_ten_by_duration.each_with_index do |monarch, index| %>
-              <li class="top-li back-color2">   <div class="index"><%=(index+1)%></div><img class="top-monarch-picture" src="<%=monarch.picture%>" alt="picture of top monarch" />
+              <li class="top-li back-color2">   <div class="top-index"><%=(index+1)%></div><img class="top-monarch-picture" src="<%=monarch.picture%>" alt="picture of top monarch" />
                 <span class="top-data">
                   <div class="top-name"><%= "#{monarch.title} #{monarch.first_name}"%></div>
                   <span class="top-info"><%="#{humanize(monarch.total_reign)}" %></span>

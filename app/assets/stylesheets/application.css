@@ -592,3 +592,10 @@ a:hover {
 .history-index {
   font-size: 20px;
 }
+
+hr {
+  border: none;
+  height: 1px;
+  color: #333;
+  background-color: #aba9a9;
+}
