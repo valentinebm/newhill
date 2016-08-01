@@ -599,3 +599,10 @@ hr {
   color: #333;
   background-color: #aba9a9;
 }
+
+.top-index {
+  display: inline-block;
+  font-size: 27px;
+  width: 60px;
+  text-align: center;
+}
