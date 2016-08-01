@@ -335,12 +335,13 @@ button a {
 }
 
 .highlight {
-  font-weight: 900;
+  font-weight: 600;
   font-size: 23px;
 }
 
 .p-stats{
   font-size: 24px;
+  font-weight: 300;
 }
 
 .previous-ruler {

@@ -19,9 +19,9 @@
         </span>
         <div class="flex-box-within">
           <span class="reign-dates">
-          <%="#{reign.created_at.to_formatted_s(:long_ordinal)}"%>
+          <%="From #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
           <% unless reign.finished == nil%>
-            <%="- #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
+            <%="until #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
           <% end %>
           </span>
 
