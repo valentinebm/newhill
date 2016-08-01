@@ -8,6 +8,6 @@ function reloadIfNewMonarch(user_id){
       }
 
       });
-  }, 3000)
+  }, 10000)
 
 }
