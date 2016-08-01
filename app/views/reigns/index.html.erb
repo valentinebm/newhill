@@ -4,9 +4,10 @@
   <div class="reigns">
     <% @reigns.to_enum.with_index.reverse_each do |reign, index| %>
       <div class="monarch-container">
-        <span class="history-index table-cell"> <%= "#{index +1}." %> </span>
+        <div class="history-index"> <%= "#{index +1}" %> </div>
         <% monarch = User.find(reign.user_id) %>
-        <span class="appellation table-cell">
+        <img class="history-picture" src="<%=monarch.picture%>" alt="picture of monarch" />
+        <span class="appellation">
           <% if monarch.gender == 'male' %>
           King
           <% elsif monarch.gender == 'female' %>
@@ -16,26 +17,27 @@
           <% end %>
           <%= "#{monarch.first_name}"%>
         </span>
-        <span class="reign-dates table-cell">
-        <%="#{reign.created_at.to_formatted_s(:long_ordinal)}"%>
-        <% unless reign.finished == nil%>
-          <%="- #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
-        <% end %>
-        </span>
-
-        <span class="reign-duration table-cell">
-          <% unless reign.finished == nil %>
-            <%="#{humanize(reign.duration)}"%>
+        <div class="flex-box-within">
+          <span class="reign-dates">
+          <%="#{reign.created_at.to_formatted_s(:long_ordinal)}"%>
+          <% unless reign.finished == nil%>
+            <%="- #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
           <% end %>
-        </span>
+          </span>
 
-        <span class="reign-weapon table-cell">
-            <%="#{reign.weapon}"%>
-        </span>
+          <span class="reign-duration">
+            <% unless reign.finished == nil %>
+              <%="#{humanize(reign.duration)}"%>
+            <% end %>
+          </span>
 
+          <span class="reign-weapon">
+              <%="#{reign.weapon}"%>
+          </span>
+        </div>
 
       </div>
-      <hr>
+
     <% end %>
   </div>
 </div>
