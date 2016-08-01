@@ -531,6 +531,7 @@ a:hover {
 .top-name {
   float: left;
   margin-left: 5px;
+  font-weight: 400;
 }
 
 .top-info {
