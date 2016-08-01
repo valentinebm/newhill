@@ -62,3 +62,8 @@
     <h3 class="h3-sharing">Sharing is ruling</h3>
     <%= social_share_button_tag("YEAH! I'm a monarch of the Kingdom of the Hill! #RulingOverTheHill") %>
 </div> -->
+<% if current_user == current_monarch%>
+  <script type="text/javascript">
+    reloadIfNewMonarch(<%=current_user.id%>)
+  </script>
+<% end %>

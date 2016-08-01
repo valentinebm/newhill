@@ -21,4 +21,8 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+  def check_if_still_monarch
+    render json: current_monarch.id == params[:user_id].to_i
+  end
+
 end

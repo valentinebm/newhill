@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # resources :users
 
   get '/users', to: 'users#index'
-  
+
   post '/reigns', to: 'users#update'
 
   root 'welcome#index'
@@ -14,6 +14,6 @@ Rails.application.routes.draw do
 
   get '/reigns', to: 'reigns#index'
 
-
+  get '/:user_id/check_monarch', to: 'users#check_if_still_monarch'
 
 end
