@@ -4,7 +4,7 @@
   <div class="reigns">
     <% @reigns.to_enum.with_index.reverse_each do |reign, index| %>
       <div class="monarch-container">
-        <span class="index"> <%= "#{index +1}." %> </span>
+        <span class="history-index"> <%= "#{index +1}." %> </span>
         <% monarch = User.find(reign.user_id) %>
         <span class="appellation">
           <% if monarch.gender == 'male' %>
@@ -17,9 +17,9 @@
           <%= "#{monarch.first_name}"%>
         </span>
         <span class="reign-dates">
-        <%="from #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
+        <%="#{reign.created_at.to_formatted_s(:long_ordinal)}"%>
         <% unless reign.finished == nil%>
-          <%="until #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
+          <%="- #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
         <% end %>
         </span>
 

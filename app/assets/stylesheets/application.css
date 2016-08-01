@@ -179,7 +179,7 @@
   }
 
   .kingdom-history {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
   }
 
@@ -202,12 +202,13 @@
 
   .monarch-container {
     margin-bottom: 15px;
+    display: table;
     width: 100%;
-
+    table-layout: fixed;
   }
 
   .appellation {
-    font-size: 23px;
+    font-size: 20px;
     text-align: left;
     font-weight: 500;
   }
@@ -399,12 +400,12 @@ button a {
 }
 
 .reign-dates {
-  font-size: 23px;
+  font-size: 17px;
   font-weight: 300;
 }
 
 .reign-duration {
-  font-size: 23px;
+  font-size: 17px;
   font-weight: 400;
 }
 
@@ -515,13 +516,6 @@ a:hover {
   margin-bottom: 3px;
 }
 
-.index {
-  display: inline-block;
-  font-size: 27px;
-  width: 60px;
-  text-align: center;
-}
-
 .top-data {
   display: inline-block;
   width: 372px;
@@ -587,4 +581,8 @@ a:hover {
 .stat-content {
   width: 75%;
   margin: 0 auto;
+}
+
+.history-index {
+  font-size: 20px;
 }
