@@ -19,6 +19,6 @@ module ApplicationHelper
 
   def current_reign
     Reign.last
-  end 
+  end
 
 end

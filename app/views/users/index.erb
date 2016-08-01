@@ -23,26 +23,40 @@
           <%= form_for [@reign] do |f| %>
             <%= f.text_field :weapon, required: true %>
             <br>
-          <%=f.submit "Take over the throne", :class => "button take-over"%>
+          <%=f.submit "Take over the throne", :class => "button take-over hp-link"%>
         </div>
 
       </div>
       <% end %>
     <% end %>
 
-  <div class="user-stats">
-    <% if current_user.total_reign >0 %>
-    <p class="reign-wrap-up">In total, you have ruled <span class="highlight"><% reigns = Reign.where.not(finished: nil).where(user_id: current_user.id) %>
-      <%= reigns.length %>
-      times</span> over the hill, for a total duration of <span class="highlight"><%= humanize(current_user.total_reign) %></span>.</p>
-
-    <ul class="ranking-list">Out of all <%=User.count %> monarchs, your global rank is:
-      <li class="ranking"><%= "##{current_user.ranking_by_reign_number}"%> by number of reigns</li>
-      <li class="ranking"><%= "##{current_user.ranking_by_duration}"%> by total reign duration</li>
-    </ul>
-  </div>
-  <% end %>
 </div>
+
+<% if current_user.total_reign >0 %>
+
+  <div class="user-stats">
+    <h3 class="h3-title">Your royal stats</h3>
+      <div class="stat-content">
+      <p class="p-stats">In total, you have ruled <span class="highlight"><% reigns = Reign.where.not(finished: nil).where(user_id: current_user.id) %>
+        <%= reigns.length %>
+        times</span> over the hill, for a total duration of <span class="highlight"><%= humanize(current_user.total_reign) %></span>.</p>
+
+      <p class="p-stats">Your global rank is:</p>
+      <div class="user-ranking-container">
+
+          <div class="stat-info">
+            <div class="user-rank back-color1"><%= "##{current_user.ranking_by_reign_number}"%></div>
+            <p class="by-p">by number of reigns</p>
+          </div>
+
+          <div class="stat-info">
+            <div class="user-rank back-color2"><%= "##{current_user.ranking_by_duration}"%></div>
+            <p class="by-p">by total reign duration</p>
+          </div>
+      </div>
+      </div>
+  </div>
+<% end %>
 
 <!-- <div class="sharing">
     <h3 class="h3-sharing">Sharing is ruling</h3>
