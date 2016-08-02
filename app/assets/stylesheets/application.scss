@@ -190,7 +190,6 @@ $blue: #193F87;
 
   .kingdom-history {
     width: 80%;
-    margin: 0 auto;
   }
 
   .history-title {
@@ -202,7 +201,7 @@ $blue: #193F87;
   }
 
   .reigns {
-    margin-top: 37px;
+    margin-top: 80px;
     // background-color: rgba(253, 253, 253, 0.55);
     border-radius: 25px;
   }
@@ -215,11 +214,8 @@ $blue: #193F87;
 
 
   .appellation {
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 500;
-    vertical-align: middle;
-    line-height: 65px;
-    display: inline-block;
   }
 
 .table-cell {
@@ -411,20 +407,14 @@ button a {
   font-weight: 400;
 }
 
-.history-subtitle {
-  font-size: 25px;
-  font-weight: 300;
-  margin-left: 40px;
-}
-
 .reign-dates {
   font-size: 13px;
   font-weight: 400;
 }
 
 .reign-duration {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .sharing {
@@ -605,10 +595,8 @@ a:hover {
 }
 
 .history-index {
-  font-size: 22px;
-  text-align: center;
-  line-height: 65px;
-  display: inline-block;
+  font-size: 30px;
+  padding-bottom: 40px;
 }
 
 hr {
@@ -629,9 +617,15 @@ hr {
 }
 
 .history-picture {
-  height:65px;
   border-radius: 7%;
 }
+
+.history-subtitle {
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+}
+
 
 .flex-box-within {
   display: flex;
@@ -654,29 +648,6 @@ hr {
   display: inline-block
 }
 
-.monarch-container .col-xs-6 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .monarch-container .col-xs-5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .monarch-container .col-xs-3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .monarch-container .col-xs-4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   @media(max-width:684px){
     .personal-message{
@@ -687,6 +658,11 @@ hr {
       margin-bottom: 0px;
       margin-top: 20px;
     }
+
+    .history-picture {
+      width:100px;
+    }
+
     .kingdom-title{
         font-size:20px;
     }
@@ -831,13 +807,12 @@ hr {
     }
 
     .history-subtitle {
-      font-size: 17px;
-      margin-left: 0px;
-      text-align: center;
+      font-size: 20px;
+      font-weight: 300;
     }
 
     .reign-weapon {
-      font-size: 17px;
+      font-size: 13px;
     }
 
     .reigns {
@@ -848,9 +823,17 @@ hr {
       display: inline-block;
     }
 
-    .appellation {
-      font-size: 18px;
-      line-height: 0px;
+    .reign-duration {
+      font-size: 13px;
     }
+
+    .appellation {
+      font-size: 22px;
+    }
+
+    .history-index{
+      font-size: 22px;
+    }
+
 
   }
