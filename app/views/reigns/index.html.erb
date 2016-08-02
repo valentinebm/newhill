@@ -6,13 +6,13 @@
       <div class="monarch-container">
 
         <div class="col-xs-6">
-          <div class="history-index col-xs-2"> <%= "#{index +1}" %> </div>
+          <div class="history-index col-xs-3"> <%= "#{index +1}" %> </div>
           <% monarch = User.find(reign.user_id) %>
           <div class="reign-picture history-index col-xs-3">
             <img class="history-picture" src="<%=monarch.picture%>" alt="picture of monarch" />
           </div>
 
-          <div class="appellation history-index col-xs-7">
+          <div class="appellation history-index col-xs-6">
             <% if monarch.gender == 'male' %>
             King
             <% elsif monarch.gender == 'female' %>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="col-xs-6">
-          <div class="col-xs-5 reign-dates">
+          <div class="col-xs-4 reign-dates">
             <%="From #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
             <% unless reign.finished == nil%>
               <%="until #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
@@ -37,7 +37,7 @@
             <%="#{humanize(reign.duration)}"%>
           <% end %>
           </div>
-          <div class="col-xs-4 reign-weapon">
+          <div class="col-xs-5 reign-weapon">
             <%="#{reign.weapon}"%>
           </div>
         </div>
