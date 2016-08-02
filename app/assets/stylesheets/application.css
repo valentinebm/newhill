@@ -262,8 +262,8 @@
 
   .personal-message {
     margin: 0 auto;
-    width: 60%;
-    background-color: rgba(253, 253, 253, 0.55);
+    width: 40%;
+    /* background-color: rgba(253, 253, 253, 0.55); */
     padding-left: 50px;
     padding-right: 58px;
     padding-top: 20px;
@@ -271,10 +271,11 @@
     margin-bottom: 30px;
     border-radius: 24px;
     color: #585151;
-    height: 350px;
+    /* height: 350px; */
+    border: 1.5px solid #564946;
     font-size: 20px;
     position: relative;
-
+    text-align: justify;
   }
 
   .button {
@@ -632,4 +633,12 @@ hr {
 .reign-weapon {
   vertical-align: middle;
   line-height: 65px;
+}
+
+.kid-celebrating {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

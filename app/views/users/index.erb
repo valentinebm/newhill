@@ -7,6 +7,7 @@
 
     <% if current_user == current_monarch %>
       <p class="compliment-or-call-to-action line-one">Yeah..that's right. YOU are ruling over the hill!</p>
+      <img src="/assets/kid-celebrating.gif" alt="kid celebrating" class="kid-celebrating" />
       <p class="compliment-or-call-to-action line-two">You've conquered the throne with such virtuosity. So much royalty in you..</p>
     <% else %>
       <% if current_user.total_reign <=0 %>
