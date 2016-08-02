@@ -4,38 +4,43 @@
   <div class="reigns">
     <% @reigns.to_enum.with_index.reverse_each do |reign, index| %>
       <div class="monarch-container">
-        <div class="history-index"> <%= "#{index +1}" %> </div>
-        <% monarch = User.find(reign.user_id) %>
-        <img class="history-picture" src="<%=monarch.picture%>" alt="picture of monarch" />
-        <span class="appellation">
-          <% if monarch.gender == 'male' %>
-          King
-          <% elsif monarch.gender == 'female' %>
-          Queen
-          <% else %>
-          Monarch
-          <% end %>
-          <%= "#{monarch.first_name}"%>
-        </span>
-        <div class="flex-box-within">
-          <span class="reign-dates">
-          <%="From #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
-          <% unless reign.finished == nil%>
-            <%="until #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
-          <% end %>
-          </span>
 
-          <span class="reign-duration">
-            <% unless reign.finished == nil %>
-              <%="#{humanize(reign.duration)}"%>
+        <div class="col-xs-6">
+          <div class="history-index col-xs-2"> <%= "#{index +1}" %> </div>
+          <% monarch = User.find(reign.user_id) %>
+          <div class="reign-picture history-index col-xs-3">
+            <img class="history-picture" src="<%=monarch.picture%>" alt="picture of monarch" />
+          </div>
+
+          <div class="appellation history-index col-xs-7">
+            <% if monarch.gender == 'male' %>
+            King
+            <% elsif monarch.gender == 'female' %>
+            Queen
+            <% else %>
+            Monarch
             <% end %>
-          </span>
-
-          <span class="reign-weapon">
-              <%="#{reign.weapon}"%>
-          </span>
+            <%= "#{monarch.first_name}"%>
+          </div>
         </div>
 
+        <div class="col-xs-6">
+          <div class="col-xs-5 reign-dates">
+            <%="From #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
+            <% unless reign.finished == nil%>
+              <%="until #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
+            <% end %>
+          </div>
+
+          <div class="col-xs-3 reign-duration">
+          <% unless reign.finished == nil %>
+            <%="#{humanize(reign.duration)}"%>
+          <% end %>
+          </div>
+          <div class="col-xs-4 reign-weapon">
+            <%="#{reign.weapon}"%>
+          </div>
+        </div>
       </div>
 
     <% end %>
