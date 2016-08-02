@@ -1,36 +1,39 @@
 <div class="personal-message">
-  <h4 class="salutation">
-    <% if current_user == current_monarch %>
-      <%=current_user.title%>
-    <% end %>
-    <%= "#{current_user.first_name}," %> </h4>
+  <div class="blur">
+  </div>
+  <div class="content">
+    <h4 class="salutation">
+      <% if current_user == current_monarch %>
+        <%=current_user.title%>
+      <% end %>
+      <%= "#{current_user.first_name}," %> </h4>
 
-    <% if current_user == current_monarch %>
-      <p class="compliment-or-call-to-action line-one">Yeah...that's right. YOU are ruling over the hill!</p>
-      <img src="/assets/kid-celebrating.gif" alt="kid celebrating" class="kid-celebrating" />
-      <p class="compliment-or-call-to-action line-two">You've conquered the throne with such virtuosity. So much royalty in you..</p>
-    <% else %>
-      <% if current_user.total_reign <=0 %>
-      <p class="compliment-or-call-to-action line-one">Welcome to the Kingdom of the Hill!</p>
-      <p class="compliment-or-call-to-action line-two">Hope you're enjoying the royal feeling...</p>
+      <% if current_user == current_monarch %>
+        <p class="compliment-or-call-to-action line-one">Yeah...that's right. YOU are ruling over the hill!</p>
+        <img src="/assets/kid-celebrating.gif" alt="kid celebrating" class="kid-celebrating" />
+        <p class="compliment-or-call-to-action line-two">You've conquered the throne with such virtuosity. So much royalty in you..</p>
       <% else %>
-      <p class="compliment-or-call-to-action line-one">You are no longer ruling over the hill. You've been usurped by <strong><%="#{usurper.title} #{usurper.first_name}"%></strong>
-      with: <strong><%="#{deadly_weapon}"%></strong>.</p>
-      <p class="compliment-or-call-to-action line-two">But the throne is warm and waiting for you to come back..</p>
-      <% end %>
-      <div class="action">
-        <p class="compliment-or-call-to-action">Choose your <strong>weapon</strong> to conqueer the throne:</p>
-        <div class="royal-form">
-          <%= form_for [@reign] do |f| %>
-            <%= f.text_field :weapon, required: true %>
-            <br>
-          <%=f.submit "Take over the throne", :class => "button take-over hp-link"%>
+        <% if current_user.total_reign <=0 %>
+        <p class="compliment-or-call-to-action line-one">Welcome to the Kingdom of the Hill!</p>
+        <p class="compliment-or-call-to-action line-two">Hope you're enjoying the royal feeling...</p>
+        <% else %>
+        <p class="compliment-or-call-to-action line-one">You are no longer ruling over the hill. You've been usurped by <strong><%="#{usurper.title} #{usurper.first_name}"%></strong>
+        with: <strong><%="#{deadly_weapon}"%></strong>.</p>
+        <p class="compliment-or-call-to-action line-two">But the throne is warm and waiting for you to come back..</p>
+        <% end %>
+        <div class="action">
+          <p class="compliment-or-call-to-action">Choose your <strong>weapon</strong> to conqueer the throne:</p>
+          <div class="royal-form">
+            <%= form_for [@reign] do |f| %>
+              <%= f.text_field :weapon, required: true %>
+              <br>
+            <%=f.submit "Take over the throne", :class => "button take-over hp-link"%>
+          </div>
+
         </div>
-
-      </div>
+        <% end %>
       <% end %>
-    <% end %>
-
+    </div>
 </div>
 
 <% if current_user.total_reign >0 %>
