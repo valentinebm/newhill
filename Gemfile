@@ -1,10 +1,4 @@
 source 'https://rubygems.org'
-gem 'will_paginate', '~> 3.0.5'
-gem 'sass-rails', '~> 5.0'
-gem 'bootstrap-will_paginate', '~> 0.0.10'
-gem 'bootstrap-sass', '~> 3.3.6'
-
-
 gem 'google-analytics-rails', '1.1.0'
 gem 'social-share-button'
 gem 'figaro'

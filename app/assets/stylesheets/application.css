@@ -15,9 +15,6 @@
  *= require social-share-button
  */
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
-
  nav {
    position: fixed;
     top: 0;

@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require_tree .
 //= require social-share-button
-//= require bootstrap
 
 $(function () {
 
