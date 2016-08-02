@@ -210,6 +210,7 @@ $blue: #193F87;
   .monarch-container {
     display: flex;
     margin-top: 8px;
+    flex-direction: column;
   }
 
 
@@ -687,7 +688,7 @@ hr {
       margin-top: 20px;
     }
     .kingdom-title{
-        font-size:23px;
+        font-size:20px;
     }
     .monarch-decl {
       font-size: 35px;
@@ -810,6 +811,46 @@ hr {
     .top-data {
       width: 100%;
       font-size: 14px;
+    }
+
+    .current-reign-decl {
+      margin-top: 0px;
+    }
+
+    .kingdom-history {
+      width: 100%;
+    }
+
+    h2.history-title {
+      margin-top: 0px
+    }
+
+    .history-title {
+      font-size: 27px;
+      margin-left: 0px;
+    }
+
+    .history-subtitle {
+      font-size: 17px;
+      margin-left: 0px;
+      text-align: center;
+    }
+
+    .reign-weapon {
+      font-size: 17px;
+    }
+
+    .reigns {
+      margin-top: 15px;
+    }
+
+    .monarch-container .col-xs-6 {
+      display: inline-block;
+    }
+
+    .appellation {
+      font-size: 18px;
+      line-height: 0px;
     }
 
   }
