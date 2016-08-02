@@ -1,6 +1,4 @@
 <div class="personal-message">
-  <div class="blur">
-  </div>
   <div class="content">
     <h4 class="salutation">
       <% if current_user == current_monarch %>
@@ -43,7 +41,7 @@
       <div class="stat-content">
       <p class="p-stats">In total, you have ruled <span class="highlight"><% reigns = Reign.where.not(finished: nil).where(user_id: current_user.id) %>
         <%= reigns.length %>
-        times</span> over the hill, for a total duration of <span class="highlight"><%= humanize(current_user.total_reign) %></span>. Your global rank is:</p>
+        times</span> over the hill, for a total duration of <span class="highlight"><%= humanize(current_user.total_reign) %></span>. <br> Your global rank is:</p>
 
       <!-- <p class="p-stats">Your global rank is:</p> -->
       <div class="user-ranking-container">

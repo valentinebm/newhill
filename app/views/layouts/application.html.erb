@@ -10,6 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Lemon|Kavoon|Poiret+One|Comfortaa|Lato|Ubuntu|Oxygen|Asap' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Patua+One|Sigmar+One|Chewy|Bevan|Luckiest+Guy|Fugaz+One|Carter+One|Slackey|Bowlby+One+SC|Finger+Paint|Titan+One|Kavoon|Londrina+Outline' rel='stylesheet' type='text/css'>
     <%= analytics_init if GoogleAnalytics.valid_tracker? %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   </head>
 
   <body>
@@ -43,16 +44,24 @@
       <div class="current-reign-decl">
         <div class="decl-top">
           <div class="decl-line-1">
-            <img class="crown" src="/assets/crown.png" alt="crown" />
-            <h2 class="monarch-decl">
-              <%= "#{current_monarch.title} #{current_monarch.first_name}" %>
-            </h2>
-            <img class="crown" src="/assets/crown.png" alt="crown" />
+            <div class="row">
+            <div class="col-xs-12">
+              <img class="crown crown-left" src="/assets/crown.png" alt="crown" />
+
+              <h2 class="monarch-decl">
+                <%= "#{current_monarch.title} #{current_monarch.first_name}" %>
+              </h2>
+
+
+              <img class="crown crown-right" src="/assets/crown.png" alt="crown" />
+            </div>
           </div>
+        </div>
+
           <h2 class="rule-decl">is ruling over the hill!</h2>
         </div>
 
-        <div class="decl-bottom ">
+        <div class="decl-bottom">
             <img class="monarch-picture" src="<%=current_monarch.picture%>" alt="current monarch" />
               <p class="reign-number "> <%= "Reign # #{current_reign.id} "%></p>
             <span class="created_at"><%= "#{current_reign.created_at.to_f}"%></span>
