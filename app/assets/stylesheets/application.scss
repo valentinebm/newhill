@@ -677,8 +677,7 @@ hr {
     align-items: center;
   }
 
-
-  @media(max-width:720px){
+  @media(max-width:684px){
     .personal-message{
       width:90%;
       padding-left: 34px;
@@ -691,7 +690,7 @@ hr {
         font-size:23px;
     }
     .monarch-decl {
-      font-size: 40px;
+      font-size: 35px;
     }
     .rule-decl {
       font-size: 25px;
@@ -703,8 +702,8 @@ hr {
     }
 
     .crown {
-      height: 40px;
-      bottom: 17px;
+      bottom: 10px;
+      width: 10%;
     }
 
     .reign-number {
@@ -747,7 +746,7 @@ hr {
     }
 
     .by-p{
-      font-size: 15px;
+      font-size: 13px;
     }
 
     .user-ranking-container {
@@ -785,6 +784,10 @@ hr {
       margin-right: 0px;
     }
 
+    .top-ten {
+      width: 100%;
+    }
+
     // .top-ten{
     //   display: auto;
     // }
@@ -799,6 +802,10 @@ hr {
 
     .link a:visited {
       color: $deepblue;
+    }
+
+    .top-data {
+      width: 100%;
     }
 
   }
