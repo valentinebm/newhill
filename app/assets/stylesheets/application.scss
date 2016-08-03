@@ -23,6 +23,10 @@ $lightgreen: #3EF6AC;
 $darkgreen: #169160;
 $blue: #193F87;
 
+html{
+  max-width: 100%;
+  overflow-x: hidden;
+  } 
 
  nav {
    position: fixed;
@@ -111,22 +115,12 @@ $blue: #193F87;
     right: 100px;
     width: 10%;
     z-index: -1;
-
-    -webkit-animation: moveclouds 20s linear infinite;
-  	-moz-animation: moveclouds 20s linear infinite;
-  	-o-animation: moveclouds 20s linear infinite;
   }
 
   .cloud-4 {
-    /*top: 350px;
-    right: 100px;*/
     width: 20%;
     z-index: -1;
     margin-top: 174px;
-
-    /*-webkit-animation: moveclouds 20s linear infinite;
-    -moz-animation: moveclouds 20s linear infinite;
-    -o-animation: moveclouds 20s linear infinite;*/
   }
 
   @-webkit-keyframes moveclouds {
