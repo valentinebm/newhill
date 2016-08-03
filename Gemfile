@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'kaminari'
+
 
 
 gem 'google-analytics-rails', '1.1.0'

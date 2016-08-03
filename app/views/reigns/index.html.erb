@@ -5,48 +5,12 @@
     data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/thekingdomofthehill/" class="fb-xfbml-parse-ignore">
     <a href="https://www.facebook.com/thekingdomofthehill/">The Kingdom of the Hill</a></blockquote>
   </div> -->
-
   <h3 class="history-subtitle">All reigns in reverse chronological order</h3>
-  <div class="reigns">
-    <% @reigns.to_enum.with_index.reverse_each do |reign, index| %>
-      <% monarch = User.find(reign.user_id) %>
-      <div class="monarch-container">
-        <div class="row">
-          <div class="col-xs-5">
-            <img class="history-picture pull-right" src="<%=monarch.picture%>" alt="picture of monarch" />
-          </div>
 
-            <div class="col-xs-7">
-              <div class="row">
-                <div class="history-index col-xs-5 pull-left"> <%= "##{index +1}" %>
-                </div>
-                <div class="appellation col-xs-7">
-                  <% if monarch.gender == 'male' %>
-                  King
-                  <% elsif monarch.gender == 'female' %>
-                  Queen
-                  <% else %>
-                  Monarch
-                  <% end %>
-                  <%= "#{monarch.first_name}"%>
-                </div>
-                </div>
-              <div class="row">
-                <div class="col-xs-12 col-md-5 reign-weapon">
-                  <%="Weapon: #{reign.weapon}"%>
-                </div>
-                <div class="col-xs-12 col-md-7 reign-duration">
-                <% unless reign.finished == nil %>
-                  <%="#{humanize(reign.duration)}"%>
-                <% end %>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-
-    <% end %>
+    <div class="reigns" id="reigns">
+      <div class="page">
+        <%= render @reigns %>
+      </div>
+    </div>
   </div>
-</div>
-</div>
+<%= paginate @reigns %>

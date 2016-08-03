@@ -16,6 +16,7 @@
 //= require_tree .
 //= require social-share-button
 //= require bootstrap-sprockets
+//= require jquery.infinitescroll
 
 $(function () {
 

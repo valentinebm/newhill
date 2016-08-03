@@ -1,0 +1,35 @@
+<div class="monarch-container reign">
+  <div class="row">
+    <div class="col-xs-5">
+      <img class="history-picture pull-right" src="<%=reign.user.picture%>" alt="picture of monarch" />
+    </div>
+
+      <div class="col-xs-7">
+        <div class="row">
+          <div class="history-index col-xs-5 pull-left"> <%= "##{reign.id}" %>
+          </div>
+          <div class="appellation col-xs-7">
+            <% if reign.user.gender == 'male' %>
+            King
+            <% elsif reign.user.gender == 'female' %>
+            Queen
+            <% else %>
+            Monarch
+            <% end %>
+            <%= "#{reign.user.first_name}"%>
+          </div>
+          </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-5 reign-weapon">
+            <%="Weapon: #{reign.weapon}"%>
+          </div>
+          <div class="col-xs-12 col-md-7 reign-duration">
+          <% unless reign.finished == nil %>
+            <%="#{humanize(reign.duration)}"%>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
