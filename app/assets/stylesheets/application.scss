@@ -207,6 +207,7 @@ html{
     margin-top: 8px;
     width: 60%;
     margin: 0 auto;
+    margin-bottom: 12px;
   }
 
 
@@ -380,7 +381,6 @@ button a {
 
 .rank-bottom {
   font-size: 13px;
-  margin-left: 30px;
 }
 
 .top-li {
@@ -410,16 +410,6 @@ button a {
 }
 
 .compliment-or-call-to-action {
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.reign-dates {
-  font-size: 13px;
-  font-weight: 400;
-}
-
-.reign-duration {
   font-size: 20px;
   font-weight: 300;
 }
@@ -633,9 +623,6 @@ hr {
   width: 62%;
 }
 
-.reign-weapon {
-  font-size: 22px;
-}
 
 .kid-celebrating {
   width: 75%;
@@ -652,6 +639,14 @@ hr {
 
 nav.pagination {
   display: none;
+}
+
+.current-reign-duration {
+  visibility: hidden;
+}
+
+.reign-weapon {
+  font-weight: 600;
 }
 
   @media only screen and (min-width: 768px){
@@ -826,21 +821,14 @@ nav.pagination {
       font-weight: 300;
     }
 
-    .reign-weapon {
-      font-size: 13px;
-    }
-
     .reigns {
       margin-top: 15px;
+      width: 95%;
     }
 
     .monarch-container {
       display: inline-block;
-      width: 100%
-    }
-
-    .reign-duration {
-      font-size: 13px;
+      width: 100%;
     }
 
     .appellation {
