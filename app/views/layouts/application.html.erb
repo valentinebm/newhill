@@ -85,7 +85,7 @@
               <% top_ten_by_reign_number.each_with_index do |monarch, index| %>
                 <div class="top-li back-color1">
                   <img class="top-monarch-picture" src="<%=monarch.picture%>" alt="picture of top monarch" />
-                  <div class="rank-info">
+                  <div class="rank-info info-top">
                     <div class="rank-top">
                       <div class="top-index"><%="##{(index+1)} - "%></div>
                       <% reigns = Reign.where.not(finished: nil).where(user_id: monarch.id) %>
@@ -105,7 +105,7 @@
               <% top_ten_by_duration.each_with_index do |monarch, index| %>
               <div class="top-li back-color2">
                 <img class="top-monarch-picture" src="<%=monarch.picture%>" alt="picture of top monarch" />
-                <div class="rank-info">
+                <div class="rank-info info-top">
                   <div class="rank-top">
                     <div class="top-index"><%="##{(index+1)} - "%></div>
                     <div class="top-name"><%= "#{monarch.title} #{monarch.first_name}"%></div>
