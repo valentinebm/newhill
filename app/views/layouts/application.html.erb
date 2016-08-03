@@ -66,7 +66,7 @@
               <p class="reign-number "> <%= "Reign # #{current_reign.id} "%></p>
             <span class="created_at"><%= "#{current_reign.created_at.to_f}"%></span>
             <div class="timer"></div>
-            <p class="previous-ruler">Previous ruler: <%= (User.find((Reign.find(current_reign.id-1)).user_id)).first_name %>, defeated with: <i><%=current_reign.weapon%></i> </p>
+            <p class="previous-ruler">Previous ruler: <span class="very-highlight"><%= (User.find((Reign.find(current_reign.id-1)).user_id)).first_name %></span>, defeated with: <span class="very-highlight"><i><%=current_reign.weapon%></i></span></p>
         </div>
       </div>
 
@@ -77,7 +77,12 @@
 
   <% unless current_page?('/reigns') %>
   <div class="top-ten-container">
-    <h3 class="h3-title">Top 10 monarchs</h3>
+    <div class="top-ten-title">
+      <img src="/assets/trophy.png" class="top-icon crown-left" alt="" />
+      <h3 class="h3-title">Top 10 monarchs</h3>
+      <img src="/assets/trophy.png" class="top-icon crown-right" alt="" />
+    </div>
+
 
       <div class="top-tenz">
           <div class="top-ten by-reign-number">

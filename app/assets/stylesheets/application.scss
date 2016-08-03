@@ -171,6 +171,8 @@ html{
     font-size: 40px;
     margin: 0px;
     text-align: center;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .top-ten {
@@ -219,10 +221,6 @@ html{
     font-weight: 500;
   }
 
-.table-cell {
-    display: table-cell;
-    text-align: center;
-}
 
   .nav-links {
     font-size: 20px;
@@ -301,6 +299,10 @@ html{
   animation: attention 8s ease infinite;
 }
 
+.top-ten-title {
+  text-align: center;
+}
+
 @keyframes attention {
   9% {
     transform: none;
@@ -357,6 +359,7 @@ button a {
 .previous-ruler {
   font-size: 18px;
   margin-top: 8px;
+  font-weight: 300;
 }
 
 .top-monarch-picture {
@@ -417,6 +420,19 @@ button a {
 
 .timer {
   font-size: 40px;
+}
+
+.top-icon {
+  height: 44px;
+  display: inline-block;
+}
+
+.crown-left {
+  margin-right: 17px
+}
+
+.crown-right {
+  margin-left: 17px
 }
 
 .compliment-or-call-to-action {
@@ -660,6 +676,10 @@ nav.pagination {
   height: 60px;
 }
 
+.very-highlight {
+  font-weight: 600;
+}
+
   @media only screen and (min-width: 768px){
   }
 
@@ -748,7 +768,7 @@ nav.pagination {
 
     .h3-title{
       margin-bottom: 0px;
-      font-size: 38px;
+      font-size: 28px;
     }
 
     .by-p{
@@ -761,6 +781,18 @@ nav.pagination {
 
     .top-ten-container{
       margin-top: 30px;
+      width: 98%;
+    }
+
+    .crown-left {
+      margin-right: 5px;
+    }
+    .crown-right {
+      margin-left: 5px;
+    }
+
+    .top-icon {
+      height: 40px;
     }
 
     .top-tenz{
@@ -768,7 +800,7 @@ nav.pagination {
     }
 
     .top-subtitle{
-      font-size: 20px;
+      font-size: 17px;
     }
 
     .top-monarch-picture {
@@ -860,11 +892,11 @@ nav.pagination {
 
   @media(max-width:360px){
     .monarch-decl {
-    font-size: 32px;
+    font-size: 31px;
     margin: 0px;
     }
 
     .rank-top {
     font-size: 17px;
-    } 
+    }
   }
