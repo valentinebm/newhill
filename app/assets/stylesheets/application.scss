@@ -22,6 +22,9 @@ $tonicblue: #00A7E1;
 $lightgreen: #3EF6AC;
 $darkgreen: #169160;
 $blue: #193F87;
+$palegolden: #EDDEA4;
+$salmon: #F7A072;
+
 
 html{
   max-width: 100%;
@@ -195,15 +198,13 @@ html{
   }
 
   .reigns {
-    margin-top: 80px;
-    // background-color: rgba(253, 253, 253, 0.55);
-    border-radius: 25px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 60px;
   }
 
   .monarch-container {
-    display: flex;
     margin-top: 8px;
-    flex-direction: column;
     width: 60%;
     margin: 0 auto;
   }
@@ -354,18 +355,8 @@ button a {
   margin-top: 8px;
 }
 
-/*.sparkley {
-  border: none;
-  padding: 16px 36px;
-  font-weight: normal;
-  border-radius: 3px;
-  transition: all 0.25s ease;
-  margin: 0 1em 1em;
-}*/
-
 .top-monarch-picture {
   border-radius: 7%;
-  height: 60px;
   width: 60px;
   vertical-align: middle;
   display: inline-block;;
@@ -655,7 +646,8 @@ hr {
 }
 
 .reign-picture {
-  display: inline-block
+  display: inline-block;
+  width:100px;
 }
 
 nav.pagination {

@@ -1,35 +1,24 @@
 <div class="monarch-container reign">
-  <div class="row">
-    <div class="col-xs-4">
-      <img class="history-picture pull-right" src="<%=reign.user.picture%>" alt="picture of monarch" />
-    </div>
-
-      <div class="col-xs-8">
-        <div class="row">
-          <div class="history-index col-md-5 col-xs-12 pull-left"> <%= "##{reign.id}" %>
-          </div>
-          <div class="appellation col-md-7 col-xs-12">
-            <% if reign.user.gender == 'male' %>
-            King
-            <% elsif reign.user.gender == 'female' %>
-            Queen
-            <% else %>
-            Monarch
-            <% end %>
-            <%= "#{reign.user.first_name}"%>
-          </div>
-          </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-5 reign-weapon">
-            <%="#{reign.weapon}"%>
-          </div>
-          <div class="col-xs-12 col-md-7 reign-duration">
-          <% unless reign.finished == nil %>
-            <%="#{humanize(reign.duration)}"%>
+    <img class="top-monarch-picture reign-picture" src="<%=reign.user.picture%>" alt="picture of monarch" />
+    <div class="rank-info">
+      <div class="rank-top">
+        <div class="top-index"><%="##{reign.id}"%></div>
+        <div class="top-name">
+          <% if reign.user.gender == 'male' %>
+          King
+          <% elsif reign.user.gender == 'female' %>
+          Queen
+          <% else %>
+          Monarch
           <% end %>
-          </div>
+          <%= "#{reign.user.first_name}"%>
         </div>
       </div>
+      <div class="rank-bottom">
+        <%="#{reign.weapon}"%><% unless reign.finished == nil %>
+          <%="#{humanize(reign.duration)}"%>
+        <% end %>
+      </div>
     </div>
-  </div>
-  <br>
+    <br>
+</div>
