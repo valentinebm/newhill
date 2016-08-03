@@ -335,7 +335,12 @@ button a {
 }
 
 .monarch-picture {
-  border-radius: 50%;
+  position: relative;
+}
+
+.frame {
+  width: 350px;
+  position: relative;
 }
 
 .salutation {
@@ -565,6 +570,22 @@ a:hover {
   float: right;
 }
 
+.decl-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('frame.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 260px;
+
+  img {
+    max-width: 132px;
+    border-radius: 50%;
+    }
+}
+
 .user-stats {
   margin: 0 auto;
   text-align: justify;
@@ -693,6 +714,16 @@ nav.pagination {
       margin-bottom: 0px;
       margin-top: 20px;
     }
+
+    .monarch-picture {
+    position: relative;
+    }
+
+    .frame {
+
+    position: relative;
+
+}
 
     .salutation{
       font-size: 22px;

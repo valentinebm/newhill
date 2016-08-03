@@ -62,12 +62,12 @@
         </div>
 
         <div class="decl-bottom">
-            <img class="monarch-picture" src="<%=current_monarch.picture%>" alt="current monarch" />
+              <img class="monarch-picture" src="<%=current_monarch.picture%>" alt="current monarch" />
+            </div>
               <p class="reign-number "> <%= "Reign # #{current_reign.id} "%></p>
             <span class="created_at"><%= "#{current_reign.created_at.to_f}"%></span>
             <div class="timer"></div>
             <p class="previous-ruler">Previous ruler: <span class="very-highlight"><%= (User.find((Reign.find(current_reign.id-1)).user_id)).first_name %></span>, defeated with: <span class="very-highlight"><i><%=current_reign.weapon%></i></span></p>
-        </div>
       </div>
 
     <% end %>
