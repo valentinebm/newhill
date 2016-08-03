@@ -856,6 +856,11 @@ nav.pagination {
       font-size: 22px;
       padding-bottom: 0px;
     }
+  }
 
-
+  @media(max-width:360px){
+    .monarch-decl {
+    font-size: 32px;
+    margin: 0px;
+    }
   }
