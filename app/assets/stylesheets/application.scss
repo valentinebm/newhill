@@ -240,7 +240,7 @@ html{
   .top-subtitle {
     font-size: 25px;
     margin: 0px;
-    margin-left: 15px;
+    margin-left: 7px;
     margin-bottom: 12px;
   }
 
@@ -316,7 +316,7 @@ html{
 
 .button-wrapper {
   margin: 0 auto;
-  height: 130px;
+  height: 100px;
   margin-top: 45px;
 }
 
@@ -340,8 +340,7 @@ button a {
 }
 
 .highlight {
-  font-weight: 600;
-  font-size: 23px;
+  font-weight: 400;
 }
 
 .p-stats{
@@ -397,7 +396,6 @@ button a {
   /*line-height: 40px;*/
   display: inline-block;
   margin-bottom: 20px;
-  margin-left: 10px;
   width: 100%;
   border-radius: 5px;
   /*color: white;*/
@@ -422,7 +420,7 @@ button a {
 
 .compliment-or-call-to-action {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .reign-dates {
@@ -601,7 +599,7 @@ a:hover {
 }
 
 .by-p {
-  margin-left: 12px;
+  // margin-left: 12px;
   margin-top: 6px;
   font-size: 17px;
 }
@@ -678,8 +676,17 @@ nav.pagination {
       margin-top: 20px;
     }
 
+    .salutation{
+      font-size: 22px;
+    }
+
     .history-picture {
       width:100px;
+    }
+
+    .link-hp {
+      width:90%;
+      padding: 0px;
     }
 
     .kingdom-title{
@@ -709,12 +716,12 @@ nav.pagination {
     }
 
     .previous-ruler {
-      font-size: 15px;
+      font-size: 13px;
       margin-top: 0px;
     }
 
     .timer {
-      font-size: 20px;
+      font-size: 25px;
     }
 
     .take-over {
@@ -736,12 +743,9 @@ nav.pagination {
       width: 85%;
     }
 
-    .highlight{
-      font-size: 20px;
-    }
-
     .h3-title{
       margin-bottom: 0px;
+      font-size: 38px;
     }
 
     .by-p{
