@@ -57,7 +57,7 @@ function getElapsedSecondsSince(creationTime, element) {
 getElapsedSecondsSince('.created_at', '.timer');
 
   var scroll_start = 0;
-  var startchange = $('.monarch-decl');
+  var startchange = $('.page-top');
   var offset = startchange.offset();
   $(document).scroll(function(){
 

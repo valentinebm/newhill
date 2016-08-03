@@ -648,6 +648,10 @@ hr {
   display: inline-block
 }
 
+nav.pagination {
+  display: none;
+}
+
 
   @media(max-width:684px){
     .personal-message{
