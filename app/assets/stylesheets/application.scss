@@ -365,6 +365,7 @@ button a {
 
 .top-index {
   display:inline-block;
+  font-weight: 300;
 }
 
 .rank-info {
@@ -681,6 +682,7 @@ nav.pagination {
     }
     .monarch-decl {
       font-size: 35px;
+      margin: 0px;
     }
     .rule-decl {
       font-size: 25px;
@@ -817,8 +819,9 @@ nav.pagination {
     }
 
     .history-subtitle {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 300;
+      margin-top: 10px;
     }
 
     .reigns {
