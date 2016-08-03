@@ -26,7 +26,7 @@ $blue: #193F87;
 html{
   max-width: 100%;
   overflow-x: hidden;
-  } 
+  }
 
  nav {
    position: fixed;
@@ -183,7 +183,7 @@ html{
   }
 
   .kingdom-history {
-    width: 80%;
+    width: 100%;
   }
 
   .history-title {
@@ -204,6 +204,8 @@ html{
     display: flex;
     margin-top: 8px;
     flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
   }
 
 
@@ -646,6 +648,9 @@ nav.pagination {
   display: none;
 }
 
+  @media only screen and (min-width: 768px){
+  }
+
 
   @media(max-width:684px){
     .personal-message{
@@ -817,8 +822,9 @@ nav.pagination {
       margin-top: 15px;
     }
 
-    .monarch-container .col-xs-6 {
+    .monarch-container {
       display: inline-block;
+      width: 100%
     }
 
     .reign-duration {
@@ -831,6 +837,7 @@ nav.pagination {
 
     .history-index{
       font-size: 22px;
+      padding-bottom: 0px;
     }
 
 
