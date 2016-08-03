@@ -1,6 +1,6 @@
 class ReignsController < ApplicationController
   def index
-    @reigns = Reign.order(created_at: :asc).page(params[:page])
+    @reigns = Reign.order(created_at: :desc).page(params[:page])
   end
 
 end
