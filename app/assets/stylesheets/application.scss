@@ -174,7 +174,7 @@ html{
     margin-top: 10px;
     display: inline-block;
     vertical-align: top;
-    width: 520px;
+    width: 500px;
     font-size: 17px;
   }
 
@@ -238,7 +238,7 @@ html{
   }
 
   .top-subtitle {
-    font-size: 30px;
+    font-size: 25px;
     margin: 0px;
     margin-left: 15px;
     margin-bottom: 12px;
@@ -347,6 +347,7 @@ button a {
 .p-stats{
   font-size: 24px;
   font-weight: 300;
+  margin-top: 15px;
 }
 
 .previous-ruler {
@@ -369,6 +370,27 @@ button a {
   width: 60px;
   vertical-align: middle;
   display: inline-block;;
+}
+
+.top-index {
+  display:inline-block;
+}
+
+.rank-info {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 7px;
+}
+
+
+.rank-top {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.rank-bottom {
+  font-size: 13px;
+  margin-left: 30px;
 }
 
 .top-li {
@@ -530,8 +552,7 @@ a:hover {
 }
 
 .top-name {
-  float: left;
-  margin-left: 5px;
+  display: inline-block;
   font-weight: 400;
 }
 
@@ -605,11 +626,6 @@ hr {
 
 .top-index {
   display: inline-block;
-  font-size: 27px;
-  width: 60px;
-  text-align: center;
-  line-height: 60px;
-  vertical-align: middle;
 }
 
 .history-picture {
@@ -749,7 +765,7 @@ nav.pagination {
     }
 
     .top-monarch-picture {
-      float: right;
+      display: inline-block;
     }
 
     .stat-content{
