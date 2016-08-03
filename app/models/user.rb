@@ -7,6 +7,7 @@ class User < ApplicationRecord
     user.password = auth['uid']
     user.first_name = auth['info']['first_name']
     user.last_name = auth['info']['last_name']
+    user.email = auth['info']['email']
     user.age_range = auth.extra.raw_info.age_range
     user.link = auth.extra.raw_info.link
     picture = auth['info']['image']
