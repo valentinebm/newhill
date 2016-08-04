@@ -209,7 +209,7 @@ html{
 
   .monarch-container {
     margin-top: 8px;
-    width: 60%;
+    width: 62%;
     margin: 0 auto;
     margin-bottom: 12px;
     padding: 7px;
@@ -727,12 +727,20 @@ nav.pagination {
     nav {
       height: 100px;
     }
-
-    .rank-info {
-      padding-top: 0px;
-    }
     .reign-picture {
       width: 120px;
+    }
+
+  }
+
+  @media only screen and (min-width:760px){
+
+    .monarch-container {
+      min-width: 550px;
+    }
+
+    .rank-info {
+      width: auto;
     }
   }
 
@@ -755,11 +763,13 @@ nav.pagination {
     }
 
     .frame {
-
     position: relative;
-
 }
 
+    .rank-info {
+      padding-top: 0px;
+    }
+    
     .salutation{
       font-size: 22px;
     }
@@ -927,14 +937,14 @@ nav.pagination {
     }
 
     .history-title {
-      font-size: 27px;
+      font-size: 22px;
       margin-left: 0px;
     }
 
     .history-subtitle {
       font-size: 18px;
       font-weight: 300;
-      margin-top: 10px;
+      margin-top: 6px;
     }
 
     .reigns {
@@ -981,5 +991,5 @@ nav.pagination {
 
     .reign-picture {
     width: 102px;
-  } 
+  }
   }
