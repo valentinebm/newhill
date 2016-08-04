@@ -32,12 +32,11 @@ html{
   }
 
  nav {
-   position: fixed;
+    position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
     z-index: 3;
-    /*background-color: rgba(105, 105, 105, 0.12);*/
+    padding-bottom: 5px;
  }
 
   body {
@@ -245,7 +244,6 @@ html{
 
   .link-2 {
     margin-left: 40px;
-    padding-right: 8px;
 
   }
 
@@ -720,20 +718,26 @@ nav.pagination {
   font-weight: 600;
 }
 
-  // @media only screen and (min-width: 768px){
-  // }
-
-  @media only screen and (max-width:780px){
+  @media only screen and (max-width: 878px){
     nav {
       height: 110px;
       text-align: center;
     }
+
+    .nav-links {
+      float: none;
+    }
+
+  }
+
+
+  @media only screen and (max-width:780px){
+
     .reign-picture {
       width: 120px;
     }
 
     .nav-links {
-      float: none;
       margin-top:0px;
       margin-left: 13px;
     }
@@ -761,10 +765,6 @@ nav.pagination {
 
 
   @media(max-width:684px){
-    nav {
-      height: 73px;
-    }
-
     .link-2 {
       margin-left: 15px;
     }
@@ -807,9 +807,6 @@ nav.pagination {
       padding: 0px;
     }
 
-    .kingdom-title{
-        font-size:20px;
-    }
     .monarch-decl {
       font-size: 35px;
       margin: 0px;
@@ -909,28 +906,10 @@ nav.pagination {
       width:100%;
     }
 
-    .nav-links {
-      font-size: 15px;
-      line-height: 0px;
-      margin-top: 4px;
-      margin-right: 0px;
-    }
-
-    .link-1 {
-      padding: 15px 15px;
-    }
-
     .top-ten {
       width: 85%;
     }
 
-    // .top-ten{
-    //   display: auto;
-    // }
-    //
-    // .top-data {
-    //   width: auto;
-    // }
 
     .link a:visited {
       color: $tonicblue;
@@ -988,6 +967,20 @@ nav.pagination {
     .history-index{
       font-size: 22px;
       padding-bottom: 0px;
+    }
+  }
+
+  @media(max-width:425px){
+    .nav-links {
+    font-size: 15px;
+    }
+
+    nav {
+      height: 80px;
+    }
+    
+    .kingdom-title{
+        font-size:20px;
     }
   }
 
