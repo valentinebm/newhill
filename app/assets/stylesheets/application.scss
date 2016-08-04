@@ -725,10 +725,21 @@ nav.pagination {
 
   @media only screen and (max-width:780px){
     nav {
-      height: 100px;
+      height: 110px;
+      text-align: center;
     }
     .reign-picture {
       width: 120px;
+    }
+
+    .nav-links {
+      float: none;
+      margin-top:0px;
+      margin-left: 13px;
+    }
+
+    .reigns {
+      margin-top: 30px;
     }
 
   }
@@ -749,6 +760,11 @@ nav.pagination {
     nav {
       height: 70px;
     }
+
+    .link-2 {
+      margin-left: 15px;
+    }
+
     .personal-message{
       width:85%;
       padding-left: 34px;
@@ -769,7 +785,7 @@ nav.pagination {
     .rank-info {
       padding-top: 0px;
     }
-    
+
     .salutation{
       font-size: 22px;
     }
@@ -890,10 +906,14 @@ nav.pagination {
     }
 
     .nav-links {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 0px;
       margin-top: 4px;
       margin-right: 0px;
+    }
+
+    .link-1 {
+      padding: 15px 15px;
     }
 
     .top-ten {
