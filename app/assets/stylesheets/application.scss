@@ -179,7 +179,7 @@ html{
     margin-top: 10px;
     display: inline-block;
     vertical-align: top;
-    width: 500px;
+    width: 400px;
     font-size: 17px;
   }
 
@@ -264,6 +264,7 @@ html{
     font-size: 25px;
     font-weight: 600;
     color: $blue;
+    margin-bottom: 0px;
 
   }
 
@@ -359,12 +360,14 @@ button a {
   font-size: 24px;
   font-weight: 300;
   margin-top: 15px;
+  text-align: center;
 }
 
 .previous-ruler {
   font-size: 18px;
   margin-top: 8px;
   font-weight: 300;
+  margin-top: 0px;
 }
 
 .top-monarch-picture {
@@ -707,7 +710,7 @@ nav.pagination {
 
   @media(max-width:684px){
     .personal-message{
-      width:90%;
+      width:85%;
       padding-left: 34px;
       padding-right: 34px;
       padding-top: 8px;
@@ -788,6 +791,7 @@ nav.pagination {
 
     .user-stats{
       margin-top: 30px;
+      width: 85%;
     }
 
     .p-stats {
@@ -795,6 +799,7 @@ nav.pagination {
       margin: 0 auto;
       margin-top: 10px;
       width: 85%;
+      text-align: justify;
     }
 
     .h3-title{
@@ -839,7 +844,7 @@ nav.pagination {
     }
 
     .stat-content{
-      width:90%;
+      width:100%;
     }
 
     nav {
@@ -854,7 +859,7 @@ nav.pagination {
     }
 
     .top-ten {
-      width: 100%;
+      width: 85%;
     }
 
     // .top-ten{
@@ -929,5 +934,9 @@ nav.pagination {
 
     .rank-top {
     font-size: 17px;
+    }
+
+    .stat-icon {
+    height: 33px;
     }
   }
