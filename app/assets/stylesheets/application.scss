@@ -409,7 +409,7 @@ button a {
   display: inline-block;
   vertical-align: middle;
   margin-left: 4px;
-  height: 100px;
+  height: 110px;
   position: relative;
   width: 60%;
   padding-top: 6px;
@@ -423,8 +423,12 @@ button a {
 
 .rank-bottom {
   font-size: 13px;
-  position: absolute;
   bottom: 6px;
+}
+
+.reign-dates {
+  margin-top: 2px;
+  margin-bottom: 6px;
 }
 
 .top-li {
@@ -705,6 +709,7 @@ nav.pagination {
 
 .history-icon {
   width:20px;
+  margin-right: 5px;
 }
 
 .info-top {
@@ -720,12 +725,22 @@ nav.pagination {
 
   @media only screen and (max-width:780px){
     nav {
-      height: 70px;
+      height: 100px;
+    }
+
+    .rank-info {
+      padding-top: 0px;
+    }
+    .reign-picture {
+      width: 120px;
     }
   }
 
 
   @media(max-width:684px){
+    nav {
+      height: 70px;
+    }
     .personal-message{
       width:85%;
       padding-left: 34px;
@@ -955,4 +970,16 @@ nav.pagination {
     .stat-icon {
     height: 33px;
     }
+
+    .rank-info {
+      width: 56%;
+    }
+
+    .rank-bottom {
+      font-size: 11px;
+    }
+
+    .reign-picture {
+    width: 102px;
+  } 
   }

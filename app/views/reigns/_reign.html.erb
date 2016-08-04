@@ -15,6 +15,12 @@
         </div>
       </div>
       <div class="rank-bottom">
+        <div class="reign-dates">
+          <%="From #{reign.created_at.to_formatted_s(:long_ordinal)}"%>
+          <% unless reign.finished == nil%>
+            <%="until #{reign.finished.to_formatted_s(:long_ordinal)} (GMT)" %>
+          <% end %>
+        </div>
         <div class="reign-duration">
           <% if reign.finished == nil %>
           <div class="current-reign-duration">
