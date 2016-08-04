@@ -20,24 +20,6 @@
 
 $(function () {
 
-//   function moveBackAndForth(targetElement, speed){
-//     targetElement.animate({left: '+=60px'},
-//   {
-//     duration: speed,
-//     complete: function()
-//     {
-//         targetElement.animate({left: '-=60px'},
-//         {
-//           duration: speed,
-//           complete: function()
-//           {
-//             moveBackAndForth(targetElement, speed)
-//           }
-//       })
-//     }
-//   })
-// }
-
 function getElapsedSecondsSince(creationTime, element) {
   setInterval(function () {
 
@@ -70,13 +52,6 @@ getElapsedSecondsSince('.created_at', '.timer');
         $('nav').css('background-color', "transparent");
         $('nav').css("box-shadow", "");
       }
-
   })
-
-
-
-// moveBackAndForth($('.cloud-1'), 5000)
-// moveBackAndForth($('.cloud-2'), 6000)
-// moveBackAndForth($('.cloud-3'), 4000)
 
 })
