@@ -51,8 +51,8 @@ html{
 
   .kingdom-title {
     font-family: 'Slackey', cursive;
-    color: #d28b2f;
-    text-shadow: rgb(154, 153, 90) 4px 4px 7px;
+    color: $tonicblue;
+    // text-shadow: #eddea4 4px 4px 7px;
     letter-spacing: 1px;
     font-size: 30px;
     margin-top: 5px;
@@ -60,6 +60,8 @@ html{
     margin-bottom: 5px;
     float: left;
     display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
   }
 
   .hill-image {
@@ -226,18 +228,39 @@ html{
     font-size: 20px;
     display: inline-block;
     float: right;
-    line-height: 55px;
     margin-right: 15px;
+    vertical-align: middle;
+    margin-top: 6px;
   }
 
   .link {
     display: inline-block;
   }
 
+  .link-1 {
+    border: solid #00a7e1 1.5px;
+    padding: 9px 15px;
+    border-radius: 5px;
+  }
+
   .link-2 {
     margin-left: 40px;
     padding-right: 8px;
 
+  }
+
+  .link a:link {
+    color: $tonicblue;
+    text-decoration: none;
+    font-weight: 300;
+  }
+
+  .link a:visited {
+    color: $tonicblue;
+  }
+
+  a:hover {
+    opacity: 0.3;
   }
 
   .top-subtitle {
@@ -486,19 +509,6 @@ button a {
   }
 }
 
-.link a:link {
-  color: #504c4c;
-  text-decoration: none;
-  font-weight: 300;
-}
-
-.link a:visited {
-  color: #504c4c;
-}
-
-a:hover {
-  opacity: 0.3;
-}
 
 .hp-link {
   color:white;
@@ -516,11 +526,11 @@ a:hover {
 
 .kingdom-title a:link {
   text-decoration: none;
-  color: #d28b2f;
+  color: $tonicblue;
 }
 
 .kingdom-title a:visited {
-  color: #d28b2f;
+  color: $tonicblue;
 }
 
 .kingdom-title a:hover {
@@ -572,6 +582,7 @@ a:hover {
 .top-info {
   float: right;
 }
+
 
 .decl-bottom {
   display: flex;
@@ -704,7 +715,13 @@ nav.pagination {
   font-weight: 600;
 }
 
-  @media only screen and (min-width: 768px){
+  // @media only screen and (min-width: 768px){
+  // }
+
+  @media only screen and (max-width:780px){
+    nav {
+      height: 70px;
+    }
   }
 
 
@@ -847,10 +864,6 @@ nav.pagination {
       width:100%;
     }
 
-    nav {
-      height: 50px;
-    }
-
     .nav-links {
       font-size: 14px;
       line-height: 0px;
@@ -871,11 +884,14 @@ nav.pagination {
     // }
 
     .link a:visited {
-      color: $deepblue;
+      color: $tonicblue;
     }
 
-    .link a:visited {
-      color: $deepblue;
+
+    nav {
+      a:visited {
+        color: $tonicblue
+      }
     }
 
     .top-data {
