@@ -4,14 +4,7 @@
       <div class="rank-top">
         <div class="top-index"><%="##{reign.id} - "%></div>
         <div class="top-name">
-          <% if reign.user.gender == 'male' %>
-          King
-          <% elsif reign.user.gender == 'female' %>
-          Queen
-          <% else %>
-          Monarch
-          <% end %>
-          <%= "#{reign.user.first_name}"%>
+          <%= "#{reign.user.title} #{reign.user.first_name}"%>
         </div>
       </div>
       <div class="rank-bottom">
