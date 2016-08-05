@@ -23,9 +23,9 @@
           <p class="compliment-or-call-to-action">Choose your <strong>weapon</strong> to conqueer the throne:</p>
           <div class="royal-form">
             <%= form_for [@reign] do |f| %>
-              <%= f.text_field :weapon, required: true, :id => "try"%>
+              <%= f.text_field :weapon, required: true %>
               <br>
-            <%=f.submit "Take over the throne", :class => "button take-over hp-link"%>
+            <%=f.submit "Take over the throne", :class => ""%>
           </div>
 
         </div>
