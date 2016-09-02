@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     previous_reign.duration = previous_reign.finished - previous_reign.created_at
     previous_reign.save
 
-    User.find(previous_reign.user_id).update_total_reign(previous_reign.duration)
+    User.find(previous_reign.user_id).update_total_reign
     redirect_to users_path
   end
 
