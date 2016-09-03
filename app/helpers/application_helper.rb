@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def top_ten_by_reign_number
-    User.joins("left join reigns on reigns.user_id = users.id").group(:id).order("count(*) desc").limit(10)
+    User.joins(:reigns).where('reigns.finished is not null').group(:id).order("count(*) desc").limit(10)
   end
 
   def current_reign
