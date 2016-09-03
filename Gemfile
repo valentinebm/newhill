@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'kaminari'
 
-
-
 gem 'google-analytics-rails', '1.1.0'
 gem 'social-share-button'
 gem 'figaro'
@@ -42,11 +40,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
-  gem 'pry-rails'
-  gem 'pry-byebug'
-  gem 'pry-rescue'
-  gem 'pry-stack_explorer'
   gem 'fabrication'
+  gem 'faker', '~> 1.6', '>= 1.6.3'
 end
 
 group :development do
