@@ -2,22 +2,29 @@
   <div class="content">
     <h4 class="salutation">
       <% if current_user == current_monarch %>
-        <%=current_user.title%>
+        <%= current_user.title %>
       <% end %>
       <%= "#{current_user.first_name}," %> </h4>
 
       <% if current_user == current_monarch %>
         <p class="compliment-or-call-to-action line-one">Yeah...that's right. YOU are ruling over the hill!</p>
         <img src="/assets/gif-<%=random_number%>.gif" alt="celebration" class="gif"/>
-        <p class="compliment-or-call-to-action line-two">You've conquered the throne with such virtuosity. So much royalty in you..</p>
+        <p class="compliment-or-call-to-action line-two">
+          You've conquered the throne with such virtuosity. So much royalty in you..
+        </p>
       <% else %>
-        <% if current_user.total_reign <=0 %>
-        <p class="compliment-or-call-to-action line-one">Welcome to the Kingdom of the Hill!</p>
-        <p class="compliment-or-call-to-action line-two">Hope you're enjoying the royal feeling...</p>
+        <% if current_user.total_reign <= 0 %>
+          <p class="compliment-or-call-to-action line-one">Welcome to the Kingdom of the Hill!</p>
+          <p class="compliment-or-call-to-action line-two">Hope you're enjoying the royal feeling...</p>
         <% else %>
-        <p class="compliment-or-call-to-action line-one">You are no longer ruling over the hill. You've been usurped by <span class="highlight"><%="#{usurper.title} #{usurper.first_name}"%></span>
-        with: <span class="highlight"><%="#{deadly_weapon}"%></span>.</p>
-        <p class="compliment-or-call-to-action line-two">But the throne is warm and waiting for you to come back..</p>
+          <p class="compliment-or-call-to-action line-one">
+            You are no longer ruling over the hill. You've been usurped by
+            <span class="highlight"><%= "#{usurper.title} #{usurper.first_name}" %></span> with:
+            <span class="highlight"><%= "#{deadly_weapon}" %></span>.
+          </p>
+          <p class="compliment-or-call-to-action line-two">
+            But the throne is warm and waiting for you to come back..
+          </p>
         <% end %>
         <div class="action">
           <p class="compliment-or-call-to-action">Choose your <strong>weapon</strong> to conqueer the throne:</p>
@@ -25,9 +32,8 @@
             <%= form_for [@reign] do |f| %>
               <%= f.text_field :weapon, required: true %>
               <br>
-            <%=f.submit "Take over the throne", :class => "button take-over hp-link"%>
+            <%= f.submit "Take over the throne", :class => "button take-over hp-link" %>
           </div>
-
         </div>
         <% end %>
       <% end %>
@@ -52,12 +58,12 @@
       <div class="user-ranking-container">
 
           <div class="stat-info">
-            <div class="user-rank back-color1"><%= "##{current_user.ranking_by_reign_number}"%></div>
+            <div class="user-rank back-color1"><%= "##{current_user.ranking_by_reign_number}" %></div>
             <p class="by-p">by number of reigns</p>
           </div>
 
           <div class="stat-info">
-            <div class="user-rank back-color2"><%= "##{current_user.ranking_by_duration}"%></div>
+            <div class="user-rank back-color2"><%= "##{current_user.ranking_by_duration}" %></div>
             <p class="by-p">by total reign duration</p>
           </div>
       </div>

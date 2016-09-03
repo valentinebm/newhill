@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-first_monarch = User.create(first_name: "Franziska", total_reign: 0)
-first_reign = Reign.create(user_id: 1)
+seeded_user = User.create!(first_name: "Franziska", total_reign: 0)
+Reign.create!(user_id: seeded_user.id, weapon: 'sword')

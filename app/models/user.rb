@@ -25,8 +25,8 @@ class User < ApplicationRecord
     end
   end
 
-  def update_total_reign(duration)
-    actual_duration = self.total_reign += duration
+  def update_total_reign
+    actual_duration = Reign.where(user_id: self.id).sum { |r| r.duration.present? ? r.duration : 0 }
     self.update_attribute(:total_reign, actual_duration)
   end
 

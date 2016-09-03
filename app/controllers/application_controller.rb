@@ -30,20 +30,22 @@ class ApplicationController < ActionController::Base
   helper_method :current_monarch
 
   def usurper
-    @ousted_monarch_last_reign = current_user.reigns.last
-    @usurper_reign = Reign.find(@ousted_monarch_last_reign.id + 1)
-    @usurper = User.find(@usurper_reign.user_id)
+    User.find(usurper_reign.user_id)
   end
 
   helper_method :usurper
 
   def deadly_weapon
-    @ousted_monarch_last_reign = current_user.reigns.last
-    @usurper_reign = Reign.find(@ousted_monarch_last_reign.id + 1)
-    @weapon = @usurper_reign.weapon
+    usurper_reign.weapon
   end
 
   helper_method :deadly_weapon
 
+  def usurper_reign
+    @usurper_reign ||= Reign.where('id > ?', last_reign.id).order(:id).first
+  end
 
+  def last_reign
+    @last_reign ||= current_user.reigns.last
+  end
 end
