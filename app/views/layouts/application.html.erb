@@ -67,7 +67,7 @@
               <p class="reign-number "> <%= "Reign # #{current_reign.id} "%></p>
             <span class="created_at"><%= "#{current_reign.created_at.to_f}"%></span>
             <div class="timer"></div>
-            <p class="previous-ruler">Previous ruler: <span class="very-highlight"><%= (User.find((Reign.find(current_reign.id-1)).user_id)).first_name %></span>, defeated with: <span class="very-highlight"><i><%=current_reign.weapon%></i></span></p>
+            <p class="previous-ruler">Previous ruler: <span class="very-highlight"><%= (User.find(previous_reign.user_id)).first_name %></span>, defeated with: <span class="very-highlight"><i><%=current_reign.weapon%></i></span></p>
       </div>
 
     <% end %>

@@ -22,6 +22,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_reign
 
+  def previous_reign
+    Reign.where('id < ?', current_reign.id).order(id: :desc).first
+  end
+
+  helper_method :previous_reign
+
   def current_monarch
     current_monarch_id = Reign.last.user_id
     @current_monarch ||= User.find(current_monarch_id)
