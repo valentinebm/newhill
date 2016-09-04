@@ -1,6 +1,6 @@
 class Reign < ApplicationRecord
   belongs_to :user
-  validates :weapon, :format => { with: /\A[a-zA-Z]+\z/ , :message => 'no special characters, only letters and numbers' }
+  validates :weapon, :format => { with: /\A[a-zA-Z]+\z/ , :message => 'Weapon name must be one word, no special characters' }
 
 
   # scope :top_ten_by_reigns, -> { includes(:user).where.not(duration: nil).order(duration: :desc).limit(10) }
