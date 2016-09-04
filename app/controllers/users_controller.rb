@@ -13,17 +13,17 @@ class UsersController < ApplicationController
 
     begin
       @reign = Reign.create!(user_id: current_user.id, weapon: params[:reign][:weapon])
+
+      previous_reign.finished = DateTime.now
+      previous_reign.duration = previous_reign.finished - previous_reign.created_at
+      previous_reign.save
+
+      User.find(previous_reign.user_id).update_total_reign
+      redirect_to users_path
     rescue Exception => e
       flash[:message] = e.message
       redirect_to users_path
     end
-
-    previous_reign.finished = DateTime.now
-    previous_reign.duration = previous_reign.finished - previous_reign.created_at
-    previous_reign.save
-
-    User.find(previous_reign.user_id).update_total_reign
-    redirect_to users_path
   end
 
   def check_if_still_monarch
