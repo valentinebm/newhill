@@ -3,6 +3,9 @@ class UsersController < ApplicationController
 
   def index
     @reign = Reign.new
+    if current_user.id == 2
+      redirect_to out_path
+    end
   end
 
   def show

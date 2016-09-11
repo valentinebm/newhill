@@ -16,4 +16,6 @@ Rails.application.routes.draw do
 
   get '/:user_id/check_monarch', to: 'users#check_if_still_monarch'
 
+  get '/out', to: 'refuse#index'
+
 end
