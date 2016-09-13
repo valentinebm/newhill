@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @reign = Reign.new
-    if current_user.id == 189
+    if current_user.id == 189 || current_user.id == 194
       redirect_to out_path
     end
   end
